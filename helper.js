@@ -1,9 +1,3 @@
-export default function reloadDev(timing) {
-  setTimeout(() => {
-    location.reload();
-  }, timing);
-}
-
 export function timeWriter(selected, text, timing) {
   for (let i = 0; i < text.length; i++) {
     setTimeout(
