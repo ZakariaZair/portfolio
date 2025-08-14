@@ -1,0 +1,12 @@
+{
+  "name": "Zakaria Zair",
+  "description": "I am a Software Engineer specialized in AI and Data Science.",
+  "favorite_lang": "",
+  "projects": [
+    {
+      "name": "qt_board_game",
+      "tiny_desc": "placeholder_text",
+      "full_desc": ""
+    }
+  ]
+}

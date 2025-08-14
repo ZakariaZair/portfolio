@@ -9,7 +9,7 @@ body {
 
 header {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     padding: 0;
     margin: 0;
     background-color: cadetblue;
@@ -19,7 +19,7 @@ header {
 .self-holder {
     width: 70%;
     height: 100%;
-    margin: 10px 15%;
+    margin: 0 15%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -28,7 +28,7 @@ header {
 
 .self-name {
     width: 100%;
-    margin: 5% 0;
+    padding: 2% 0 1%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -42,15 +42,15 @@ header {
 
 .self-description {
     width: 100%;
-    margin: 5% 0;
+    padding: 1% 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    & h1 {
+    & p {
         padding: 0;
         margin: 0;
-        font-size: 90px;
+        font-size: 24px;
     }
 }
 
@@ -61,9 +61,26 @@ main {
     background: center/100% url("assets/up_bg.png");
 }
 
+.projects-holder {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project-container {
+    width: 80%;
+    height: 320px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
 footer {
     width: 100%;
-    height: 30vh;
+    height: 320px;
     padding: 0;
     margin: 0;
     background: no-repeat center/100% url("assets/foot_bg.png");
