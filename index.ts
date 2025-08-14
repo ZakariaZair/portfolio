@@ -1,4 +1,4 @@
-import { timeWriter, reloadDev } from "helper.ts";
+import { timeWriter, reloadDev } from "./helper.ts";
 
 reloadDev(5000);
 
