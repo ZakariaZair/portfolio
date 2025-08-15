@@ -1,12 +1,50 @@
 {
   "name": "Zakaria Zair",
-  "description": "I am a Software Engineer specialized in AI and Data Science.",
-  "favorite_lang": "",
+  "description": "I am a Software Engineer specialized in AI and Data Science. Welcome !",
+  "fav_lang": "C++, Python, Java",
+  "fav_domains": "AI : () ",
+  "self_links": [
+    {
+      "net_link": "https://www.linkedin.com/in/zakaria-zair-2793ba23a",
+      "icon_link": "./assets/icons/lk_icon.png"
+    },
+    {
+      "net_link": "https://github.com/ZakariaZair",
+      "icon_link": "./assets/icons/github_icon.png"
+    }
+  ],
   "projects": [
     {
-      "name": "qt_board_game",
-      "tiny_desc": "placeholder_text",
-      "full_desc": ""
+      "name": "QT Chess Game",
+      "tiny_desc": "Refactoring of an old QT project. Program: C++ compile in clang++. Build system: qmake with a .pro config file. Cross-platform: Windows, Linux & MacOS.",
+      "full_desc": "",
+      "icon_link": "./assets/icons/chess_icon.png",
+      "logos_links": [
+        "./assets/icons/git_icon.png",
+        "./assets/icons/cpp_icon.png",
+        "./assets/icons/zed_icon.png"
+      ]
+    },
+    {
+      "name": "Online Tactical Board",
+      "tiny_desc": "Using Angular and NestJS, I built a full-stack web application tactical board for the game Rocket League. Angular, NestJS.",
+      "full_desc": "",
+      "icon_link": "./assets/icons/soccer_icon.png",
+      "logos_links": [
+        "./assets/icons/git_icon.png",
+        "./assets/icons/zed_icon.png"
+      ]
+    },
+    {
+      "name": "Unity Game",
+      "tiny_desc": "I developed a 2D puzzle platformer game.",
+      "full_desc": "",
+      "icon_link": "./assets/icons/unity_icon.png",
+      "logos_links": [
+        "./assets/icons/git_icon.png",
+        "./assets/icons/unity_icon.png",
+        "./assets/icons/zed_icon.png"
+      ]
     }
   ]
 }

@@ -7,39 +7,60 @@ hotReload(15000);
 
 const myName = selfData.name;
 const nodeName = document.querySelector(".self-name").querySelector("h1");
-loadAfter(() => timeWriter(nodeName, myName, 200), 1000);
+loadAfter(() => timeWriter(nodeName, myName, 200), 500);
 
 const myDesc = selfData.description;
 const nodeDesc = document.querySelector(".self-description").querySelector("p");
-loadAfter(() => timeWriter(nodeDesc, myDesc, 25), 4000);
+loadAfter(() => timeWriter(nodeDesc, myDesc, 25), 3000);
+
+loadAfter(() => {
+  const nodeLinks = document.querySelector(".self-links");
+  for (let link of selfData.self_links) {
+    let nodeHref = document.createElement("a");
+    let nodeIcon = document.createElement("img");
+    nodeHref.href = link.net_link;
+    nodeHref.target = "_blank";
+    nodeHref.rel = "nooopener noreferrer";
+    nodeIcon.src = link.icon_link;
+    nodeHref.append(nodeIcon);
+    nodeLinks.appendChild(nodeHref);
+  }
+}, 3000);
 
 const pHolder = document.querySelector(".projects-holder");
 for (let i = 0; i < selfData.projects.length; i++) {
   let spName = selfData.projects[i].name;
   let spDesc = selfData.projects[i].tiny_desc;
-
-  const nodePName = document.createElement("div");
-  nodePName.setAttribute("class", "project-name");
-  const nodeName = document.createElement("p");
-  nodeName.textContent = spName;
+  let spIconLnk = selfData.projects[i].icon_link;
 
   const nodePButton = document.createElement("div");
   nodePButton.setAttribute("class", "project-button");
   const nodeIcon = document.createElement("img");
+  nodeIcon.src = spIconLnk;
 
   const nodePDesc = document.createElement("div");
   nodePDesc.setAttribute("class", "project-description");
+  const nodeName = document.createElement("p");
+  nodeName.textContent = spName;
   const nodeDesc = document.createElement("p");
   nodeDesc.textContent = spDesc;
+
+  const nodePLogos = document.createElement("div");
+  nodePLogos.setAttribute("class", "project-logos");
+  for (let logoLnk of selfData.projects[i].logos_links) {
+    let nodeLogo = document.createElement("img");
+    nodeLogo.src = logoLnk;
+    nodePLogos.appendChild(nodeLogo);
+  }
 
   const nodePContainer = document.createElement("div");
   nodePContainer.setAttribute("class", "project-container");
 
-  nodePName.appendChild(nodeName);
   nodePButton.appendChild(nodeIcon);
+  nodePDesc.appendChild(nodeName);
   nodePDesc.appendChild(nodeDesc);
-  nodePContainer.appendChild(nodePName);
   nodePContainer.appendChild(nodePButton);
   nodePContainer.appendChild(nodePDesc);
+  nodePContainer.appendChild(nodePLogos);
   pHolder.appendChild(nodePContainer);
 }
