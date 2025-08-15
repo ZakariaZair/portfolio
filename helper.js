@@ -15,6 +15,21 @@ export function timeWriter(selected, text, timing) {
   }
 }
 
+export function initScrollShow(node) {
+  window.addEventListener("scroll", () => {
+    scrollToShow(node);
+  });
+}
+
+function scrollToShow(node) {
+  if (node.style.visibility != "hidden") return;
+  let y = node.getBoundingClientRect().top;
+  if (window.scrollY >= y) {
+    node.style.visibility = "";
+    node.style.opacity = 1;
+  }
+}
+
 export function loadAfter(callback, timing) {
   setTimeout(callback, timing);
 }

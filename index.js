@@ -1,6 +1,7 @@
 import { hotReload } from "./helper.js";
 import { timeWriter } from "./helper.js";
 import { loadAfter } from "./helper.js";
+import { initScrollShow } from "./helper.js";
 import selfData from "./assets/self_data.json" with { type: "json" };
 
 hotReload(15000);
@@ -62,5 +63,9 @@ for (let i = 0; i < selfData.projects.length; i++) {
   nodePContainer.appendChild(nodePButton);
   nodePContainer.appendChild(nodePDesc);
   nodePContainer.appendChild(nodePLogos);
+  nodePContainer.style.visibility = "hidden";
+  nodePContainer.style.opacity = 0;
+  initScrollShow(nodePContainer);
+
   pHolder.appendChild(nodePContainer);
 }
