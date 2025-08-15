@@ -190,10 +190,15 @@ footer {
             font-size: 16px;
         }
     }
-    .project-logos {
+    .project-container {
+        height: 225px;
+    }
+    .project-button {
+        width: 64px;
+        height: 64px;
         & img {
-            width: 32px;
-            height: 32px;
+            width: 64px;
+            height: 64px;
         }
     }
     .project-description {
@@ -206,12 +211,10 @@ footer {
             text-align: center;
         }
     }
-    .project-button {
-        width: 64px;
-        height: 64px;
+    .project-logos {
         & img {
-            width: 64px;
-            height: 64px;
+            width: 32px;
+            height: 32px;
         }
     }
 }
