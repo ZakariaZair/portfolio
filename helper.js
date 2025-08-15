@@ -27,6 +27,8 @@ function scrollToShow(node) {
   if (window.scrollY >= y) {
     node.style.visibility = "";
     node.style.opacity = 1;
+    node.style.transform = "translate(0, 20px)";
+    node.style.transform = "translate(0, -20px)";
   }
 }
 

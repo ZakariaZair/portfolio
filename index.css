@@ -114,7 +114,9 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    transition: opacity 0.5s ease-in-out;
+    transition:
+        opacity 0.5s ease-in-out,
+        transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .project-button {
