@@ -9,7 +9,7 @@ body {
 
 header {
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     padding: 0;
     margin: 0;
     background-color: cadetblue;
@@ -75,6 +75,7 @@ header {
 }
 
 .self-profile {
+    margin: 50px 0 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -82,7 +83,7 @@ header {
     justify-content: center;
     & p {
         font-size: 16px;
-        margin: 0;
+        margin: 2px 0;
     }
 }
 
@@ -200,9 +201,9 @@ footer {
 /* N */
 /*   */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 731px) {
     header {
-        height: 25vh;
+        height: 55vh;
     }
     .self-name {
         justify-content: center;
@@ -218,7 +219,7 @@ footer {
     }
     .self-profile {
         & p {
-            font-size: 9px;
+            font-size: 11px;
         }
     }
     .project-container {
