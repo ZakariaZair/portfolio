@@ -1,10 +1,7 @@
-import { hotReload } from "./helper.js";
 import { timeWriter } from "./helper.js";
 import { loadAfter } from "./helper.js";
-import { initScrollShow } from "./helper.js";
+import { initAnimationShow } from "./helper.js";
 import selfData from "./assets/self_data.json" with { type: "json" };
-
-hotReload(15000);
 
 const myName = selfData.name;
 const nodeName = document.querySelector(".self-name").querySelector("h1");
@@ -28,7 +25,17 @@ loadAfter(() => {
   }
 }, 3000);
 
-const pHolder = document.querySelector(".projects-holder");
+const profileHolder = document.querySelector(".self-profile");
+for (let i = 0; i < selfData.profile.length; i++) {
+  let comment = selfData.profile[i];
+  let nodeComm = document.createElement("p");
+  loadAfter(() => timeWriter(nodeComm, comment, 20), 3700 + (i % 2) * 2000);
+  if (i == selfData.profile.length - 1 || i == selfData.profile.length - 2)
+    nodeComm.style.fontWeight = 800;
+  profileHolder.appendChild(nodeComm);
+}
+
+const projectHolder = document.querySelector(".projects-holder");
 for (let i = 0; i < selfData.projects.length; i++) {
   let spName = selfData.projects[i].name;
   let spDesc = selfData.projects[i].tiny_desc;
@@ -45,7 +52,6 @@ for (let i = 0; i < selfData.projects.length; i++) {
   nodeName.textContent = spName;
   const nodeDesc = document.createElement("p");
   nodeDesc.textContent = spDesc;
-
   const nodePLogos = document.createElement("div");
   nodePLogos.setAttribute("class", "project-logos");
   for (let logoLnk of selfData.projects[i].logos_links) {
@@ -63,9 +69,8 @@ for (let i = 0; i < selfData.projects.length; i++) {
   nodePContainer.appendChild(nodePButton);
   nodePContainer.appendChild(nodePDesc);
   nodePContainer.appendChild(nodePLogos);
-  nodePContainer.style.visibility = "hidden";
-  nodePContainer.style.opacity = 0;
-  initScrollShow(nodePContainer);
+  nodePContainer.style.opacity = 0.1;
+  initAnimationShow(nodePContainer);
 
-  pHolder.appendChild(nodePContainer);
+  projectHolder.appendChild(nodePContainer);
 }

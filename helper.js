@@ -15,21 +15,30 @@ export function timeWriter(selected, text, timing) {
   }
 }
 
-export function initScrollShow(node) {
+export function initAnimationShow(node) {
   window.addEventListener("scroll", () => {
     scrollToShow(node);
+  });
+  node.addEventListener("mouseover", () => {
+    hoverToShow(node);
   });
 }
 
 function scrollToShow(node) {
-  if (node.style.visibility != "hidden") return;
+  if (node.style.opacity >= 1) return;
   let y = node.getBoundingClientRect().top;
   if (window.scrollY >= y) {
-    node.style.visibility = "";
     node.style.opacity = 1;
     node.style.transform = "translate(0, 20px)";
     node.style.transform = "translate(0, -20px)";
   }
+}
+
+function hoverToShow(node) {
+  if (node.style.opacity >= 1) return;
+  node.style.opacity = 1;
+  node.style.transform = "translate(0, 20px)";
+  node.style.transform = "translate(0, -20px)";
 }
 
 export function loadAfter(callback, timing) {
