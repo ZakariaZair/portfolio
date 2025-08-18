@@ -3,6 +3,12 @@ import { loadAfter } from "./helper.js";
 import { initAnimationShow } from "./helper.js";
 import selfData from "./assets/self_data.json" with { type: "json" };
 
+fetch("./popup.html")
+  .then((response) => response.text())
+  .then((data) => {
+    document.querySelector(".popup-holder").innerHTML = data;
+  });
+
 const myName = selfData.name;
 const nodeName = document.querySelector(".self-name").querySelector("h1");
 loadAfter(() => timeWriter(nodeName, myName, 200), 500);

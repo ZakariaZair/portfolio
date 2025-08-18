@@ -41,6 +41,19 @@ function hoverToShow(node) {
   node.style.transform = "translate(0, -20px)";
 }
 
+export function listenForPopup(buttonNode, infos) {
+  buttonNode.addEventListener("click", () => {
+    const pName = infos.name;
+    const pDesc = infos.full_desc;
+    const titleNode = document.querySelector(".project-name");
+    titleNode.textContent = pName;
+  });
+}
+
+export function openPopup() {}
+
+export function closePopup() {}
+
 export function loadAfter(callback, timing) {
   setTimeout(callback, timing);
 }
