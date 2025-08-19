@@ -37,6 +37,8 @@
       "icon_link": "./assets/icons/soccer_icon.png",
       "logos_links": [
         "./assets/icons/git_icon.png",
+        "./assets/icons/ang_icon.png",
+        "./assets/icons/ts_icon.png",
         "./assets/icons/zed_icon.png"
       ]
     },
@@ -47,8 +49,7 @@
       "icon_link": "./assets/icons/unity_icon.png",
       "logos_links": [
         "./assets/icons/git_icon.png",
-        "./assets/icons/unity_icon.png",
-        "./assets/icons/zed_icon.png"
+        "./assets/icons/unity_icon.png"
       ]
     }
   ]

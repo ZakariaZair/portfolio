@@ -4,6 +4,14 @@ export function hotReload(timing) {
   }, timing);
 }
 
+export function loadHtmlFile(doc, classname) {
+  fetch(doc)
+    .then((response) => response.text())
+    .then((data) => {
+      document.querySelector(classname).innerHTML = data;
+    });
+}
+
 export function timeWriter(selected, text, timing) {
   for (let i = 0; i < text.length; i++) {
     setTimeout(
@@ -45,7 +53,14 @@ export function listenForPopup(buttonNode, infos) {
   buttonNode.addEventListener("click", () => {
     const pName = infos.name;
     const pDesc = infos.full_desc;
-    const titleNode = document.querySelector(".project-name");
+
+    const bodyNode = document.querySelector("body");
+    bodyNode.style.overflow = "hidden";
+
+    const popupNode = document.querySelector(".popup-holder");
+    popupNode.style.display = "flex";
+    popupNode.style.top = window.scrollY + "px";
+    const titleNode = document.querySelector(".project-name span");
     titleNode.textContent = pName;
   });
 }

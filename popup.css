@@ -1,4 +1,28 @@
-.pop-noground {
-    width: 100%;
-    height: 100%;
+.pop-background {
+    width: 60%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.project-name {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    & span {
+        width: 100%;
+        text-align: center;
+    }
+}
+.slider-holder {
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.left-button {
+}
+.content-holder {
+}
+.right-button {
 }

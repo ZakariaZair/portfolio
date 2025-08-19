@@ -1,2 +1,4 @@
 .env
 cmd_lines.txt
+
+.DS_Store
