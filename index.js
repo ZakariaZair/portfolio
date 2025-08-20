@@ -1,18 +1,16 @@
-import { loadHtmlFile } from "./helper.js";
-import { timeWriter } from "./helper.js";
-import { loadAfter } from "./helper.js";
-import { listenForPopup } from "./helper.js";
-import { initAnimationShow } from "./helper.js";
+import {
+  closePopup,
+  loadHtmlFile,
+  timeWriter,
+  loadAfter,
+  listenForPopup,
+  initAnimationShow,
+  setButtonCue,
+} from "./helper.js";
 import selfData from "./assets/self_data.json" with { type: "json" };
 
 loadHtmlFile("./popup.html", ".popup-holder");
-const popupNode = document.querySelector(".popup-holder");
-popupNode.addEventListener("click", (event) => {
-  if (event.target !== event.currentTarget) return;
-  const bodyNode = document.querySelector("body");
-  bodyNode.style.overflow = "scroll";
-  popupNode.style.display = "none";
-});
+closePopup(".popup-holder");
 
 const myName = selfData.name;
 const nodeName = document.querySelector(".self-name").querySelector("h1");
@@ -57,6 +55,7 @@ for (let i = 0; i < selfData.projects.length; i++) {
   listenForPopup(nodePButton, selfData.projects[i]);
   const nodeIcon = document.createElement("img");
   nodeIcon.src = spIconLnk;
+  if (i == 0) setButtonCue(nodePButton);
 
   const nodePDesc = document.createElement("div");
   nodePDesc.setAttribute("class", "project-description");

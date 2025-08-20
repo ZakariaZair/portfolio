@@ -65,9 +65,27 @@ export function listenForPopup(buttonNode, infos) {
   });
 }
 
-export function openPopup() {}
+export function closePopup(closeInfo) {
+  const popupNode = document.querySelector(closeInfo);
+  popupNode.addEventListener("click", (event) => {
+    if (event.target !== event.currentTarget) return;
+    const bodyNode = document.querySelector("body");
+    bodyNode.style.overflow = "scroll";
+    popupNode.style.display = "none";
+  });
+}
 
-export function closePopup() {}
+export function setButtonCue(buttonNode) {
+  const cueNode = document.createElement("span");
+  cueNode.textContent = "Click here to view";
+  buttonNode.appendChild(cueNode);
+  buttonNode.addEventListener("mouseover", () => {
+    cueNode.style.opacity = 0;
+    setTimeout(() => {
+      cueNode.remove();
+    }, 1000);
+  });
+}
 
 export function loadAfter(callback, timing) {
   setTimeout(callback, timing);
