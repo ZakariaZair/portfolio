@@ -82,7 +82,7 @@ for (let i = 0; i < selfData.projects.length; i++) {
   nodePContainer.appendChild(nodePButton);
   nodePContainer.appendChild(nodePDesc);
   nodePContainer.appendChild(nodePLogos);
-  nodePContainer.style.opacity = 0.1;
+  nodePContainer.style.opacity = 0.05;
   initAnimationShow(nodePContainer);
 
   projectHolder.appendChild(nodePContainer);

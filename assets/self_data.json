@@ -2,10 +2,11 @@
   "name": "Zakaria Zair",
   "description": "I am a Software Engineer specialized in AI and Data Science. Welcome !",
   "profile": [
-    "Interested in data engineering, solution modeling, neural networks, ,computer graphics optimizations, modelization of 3D physics simulations, ",
+    "Interested in data engineering, solution modeling, neural networks, computer graphics optimizations, 3D physics simulations",
     "Consistent communication skills → fluent in French and experienced in English",
-    "Favorite Languages: C++, Python, Js, SQL, Java",
-    "Favorite Technologies: AWS, GCP, RESTapi, Docker, WebSockets, Oracle, TCP/UDP, Unity, Vulkan"
+    "Favorite Languages: Python, C++, Typescript, SQL, Java",
+    "Technologies: AWS, GCP, Docker, WebSockets, PostgreSQL, Unity, Unreal Engine, OpenGL, Vulkan",
+    "Tools: Git, GitLab, Jira, Postman, Tmux, Zed"
   ],
   "self_links": [
     {
@@ -28,6 +29,10 @@
         "./assets/icons/cpp_icon.png",
         "./assets/icons/qt_icon.png",
         "./assets/icons/zed_icon.png"
+      ],
+      "slide_show_links": [
+        "./assets/gifs/chess_gif.gif",
+        "./assets/pngs/chess_bg.png"
       ]
     },
     {
@@ -40,6 +45,12 @@
         "./assets/icons/ang_icon.png",
         "./assets/icons/ts_icon.png",
         "./assets/icons/zed_icon.png"
+      ],
+      "slide_show_links": [
+        "./assets/gifs/bm_gif.gif",
+        "./assets/pngs/bm_front.png",
+        "./assets/pngs/bm_editor.png",
+        "./assets/pngs/bm_connect.png"
       ]
     },
     {
@@ -50,6 +61,10 @@
       "logos_links": [
         "./assets/icons/git_icon.png",
         "./assets/icons/unity_icon.png"
+      ],
+      "slide_show_links": [
+        "./assets/gifs/un_gif.gif",
+        "./assets/pngs/un_unity_editor.png"
       ]
     }
   ]
