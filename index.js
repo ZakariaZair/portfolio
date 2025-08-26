@@ -39,8 +39,7 @@ for (let i = 0; i < selfData.profile.length; i++) {
   let comment = selfData.profile[i];
   let nodeComm = document.createElement("p");
   loadAfter(() => timeWriter(nodeComm, comment, 20), 5000 + i * 2200);
-  if (i == selfData.profile.length - 1 || i == selfData.profile.length - 2)
-    nodeComm.style.fontWeight = 850;
+  if (i == 0 || i == 1) nodeComm.style.fontWeight = 850;
   profileHolder.appendChild(nodeComm);
 }
 

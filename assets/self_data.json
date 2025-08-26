@@ -3,9 +3,9 @@
   "description": "I am a Software Engineer specialized in AI and Data Science. Welcome !",
   "profile": [
     "Interested in data engineering, solution modeling, neural networks, computer graphics optimizations, 3D physics simulations",
-    "Consistent communication skills → fluent in French and experienced in English",
+    "Consistent communication skills (EN, FR)",
     "Favorite Languages: Python, C++, Typescript, SQL, Java",
-    "Technologies: AWS, GCP, Docker, WebSockets, PostgreSQL, Unity, Unreal Engine, OpenGL, Vulkan",
+    "Tech: AWS, GCP, Docker, WebSockets, Postgres, Unity, Unreal Engine, OpenGL, Vulkan",
     "Tools: Git, GitLab, Jira, Postman, Tmux, Zed"
   ],
   "self_links": [
@@ -22,7 +22,6 @@
     {
       "name": "QT Chess Game",
       "tiny_desc": "A chessboard game made in Qt, written in C++, compiled in clang++ with script handle in Makefile, compatible on Windows, Linux & MacOS. The project was refactored from an old school project made in 2022.",
-      "full_desc": "",
       "icon_link": "./assets/icons/chess_icon.png",
       "logos_links": [
         "./assets/icons/git_icon.png",
@@ -30,41 +29,68 @@
         "./assets/icons/qt_icon.png",
         "./assets/icons/zed_icon.png"
       ],
+      "full_desc": "",
       "slide_show_links": [
         "./assets/gifs/chess_gif.gif",
         "./assets/pngs/chess_bg.png"
       ]
     },
     {
-      "name": "Online Tactical Board",
+      "name": "Online Tactical Board (BM Plugin)",
       "tiny_desc": "Using Angular and NestJS, I built a full-stack web application tactical board for the game Rocket League. Angular, NestJS.",
-      "full_desc": "",
       "icon_link": "./assets/icons/soccer_icon.png",
       "logos_links": [
         "./assets/icons/git_icon.png",
         "./assets/icons/ang_icon.png",
         "./assets/icons/ts_icon.png",
+        "./assets/icons/cpp_icon.png",
+        "./assets/icons/vis_icon.png",
         "./assets/icons/zed_icon.png"
       ],
+      "full_desc": "",
       "slide_show_links": [
-        "./assets/gifs/bm_gif.gif",
         "./assets/pngs/bm_front.png",
         "./assets/pngs/bm_editor.png",
-        "./assets/pngs/bm_connect.png"
+        "./assets/gifs/bm_gif.gif",
+        "./assets/pngs/bm_connect.png",
+        "./assets/pngs/bm_minimap.png",
+        "./assets/gifs/bm_back_gif.gif",
+        "./assets/pngs/bm_back_editor.png"
       ]
     },
     {
       "name": "Unity Game",
       "tiny_desc": "I developed a 2D puzzle platformer game.",
-      "full_desc": "",
       "icon_link": "./assets/icons/unity_icon.png",
       "logos_links": [
         "./assets/icons/git_icon.png",
-        "./assets/icons/unity_icon.png"
+        "./assets/icons/unity_icon.png",
+        "./assets/icons/csharp_icon.png",
+        "./assets/icons/zed_icon.png"
       ],
+      "full_desc": "",
       "slide_show_links": [
         "./assets/gifs/un_gif.gif",
         "./assets/pngs/un_unity_editor.png"
+      ]
+    },
+    {
+      "name": "SQL Hotel Reservation",
+      "tiny_desc": "A full-stack web application (client-server) for hotel booking in PostgreSQL. From defining the project configuration with required CTEs to managing advanced user queries, using with relational algebra.",
+      "icon_link": "./assets/icons/chess_icon.png",
+      "logos_links": [
+        "./assets/icons/git_icon.png",
+        "./assets/icons/ang_icon.png",
+        "./assets/icons/ts_icon.png",
+        "./assets/icons/sql1_icon.png",
+        "./assets/icons/zed_icon.png"
+      ],
+      "full_desc": "",
+      "slide_show_links": [
+        "./assets/pngs/sqlh_mainpage.png",
+        "./assets/pngs/sqlh_hotels.png",
+        "./assets/pngs/sqlh_rooms.png",
+        "./assets/pngs/sqlh_guests.png"
       ]
     }
   ]

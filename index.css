@@ -124,7 +124,6 @@ main {
     width: 85%;
     height: 320px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     transition:
@@ -237,7 +236,7 @@ footer {
 /* N */
 /*   */
 
-@media screen and (max-width: 731px) {
+@media screen and (max-width: 800px) {
     header {
         height: 60vh;
     }
@@ -262,6 +261,7 @@ footer {
     }
     .project-container {
         height: 225px;
+        flex-direction: column;
     }
     .project-button {
         width: 64px;

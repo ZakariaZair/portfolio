@@ -55,8 +55,10 @@ function hoverToShow(node) {
 
 export function listenForPopup(buttonNode, infos) {
   buttonNode.addEventListener("click", () => {
-    const pName = infos.name;
-    const pDesc = infos.full_desc;
+    const titleNode = document.querySelector(".project-name span");
+    titleNode.textContent = infos.name;
+    const pFullDNode = document.querySelector(".project-full-description span");
+    pFullDNode.textContent = infos.full_desc;
 
     const bodyNode = document.querySelector("body");
     bodyNode.style.overflow = "hidden";
@@ -67,19 +69,17 @@ export function listenForPopup(buttonNode, infos) {
     controller.abort();
     controller = new AbortController();
     signal = controller.signal;
-    setSlider(infos);
-
-    const titleNode = document.querySelector(".project-name span");
-    titleNode.textContent = pName;
+    setAllSlider(infos);
   });
 }
 
-function setSlider(infos) {
+function setAllSlider(infos) {
   sliderIndex = 0;
   const sliderContentImgNode = document.querySelector(".content-holder img");
   const slideButtonLeftNode = document.querySelector(".slider-left");
   const slideButtonRightNode = document.querySelector(".slider-right");
   function outOfBounds() {
+    sliderContentImgNode.src = "./assets/gifs/loading_gif.gif";
     slideButtonLeftNode.style.opacity = 1;
     slideButtonRightNode.style.opacity = 1;
     if (sliderIndex <= 0) slideButtonLeftNode.style.opacity = 0.2;
@@ -111,8 +111,6 @@ function setSlider(infos) {
     },
     { signal },
   );
-  for (let slideLnk of infos.slide_show_links) {
-  }
 }
 
 export function closePopup(closeInfo) {
@@ -120,6 +118,8 @@ export function closePopup(closeInfo) {
   popupNode.addEventListener("click", (event) => {
     if (event.target !== event.currentTarget) return;
     const bodyNode = document.querySelector("body");
+    const imgNode = document.querySelector(".content-holder img");
+    imgNode.src = "./assets/gifs/loading_gif.gif";
     bodyNode.style.overflow = "scroll";
     popupNode.style.display = "none";
   });
