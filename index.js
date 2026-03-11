@@ -54,7 +54,7 @@ for (let i = 0; i < selfData.projects.length; i++) {
   listenForPopup(nodePButton, selfData.projects[i]);
   const nodeIcon = document.createElement("img");
   nodeIcon.src = spIconLnk;
-  if (i == 0) setButtonCue(nodePButton);
+  setButtonCue(nodePButton);
 
   const nodePDesc = document.createElement("div");
   nodePDesc.setAttribute("class", "project-description");

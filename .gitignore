@@ -1,4 +1,5 @@
 .env
 cmd_lines.txt
+/node_modules
 
 .DS_Store
