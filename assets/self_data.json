@@ -1,12 +1,12 @@
 {
   "name": "Zakaria Zair",
-  "description": "I am a .",
+  "description": "I am a Software professional who loves developing applications that helps people.",
   "profile": [
     "Interested in data engineering, solution modeling, neural networks, computer graphics optimizations, 3D physics simulations",
-    "Consistent communication skills (EN, FR)",
-    "Favorite Languages: Python, C++, Typescript, SQL, Java",
-    "Tech: AWS, GCP, Docker, WebSockets, Postgres, Unity, Unreal Engine, OpenGL, Vulkan",
-    "Tools: Git, GitLab, Jira, Postman, Tmux, Zed"
+    "Strong communication skills (EN, FR)",
+    "Favorite Languages : Python, C++, Typescript, SQL, Java",
+    "Tech : AWS, GCP, Docker, WebSockets, Postgres, Unity, Unreal Engine, OpenGL, Vulkan",
+    "Tools : Git, GitLab, Jira, Postman, Tmux, Zed"
   ],
   "self_links": [
     {
@@ -20,32 +20,62 @@
   ],
   "projects": [
     {
+      "name": "7 Difference Online Application",
+      "tiny_desc": "Online multiplayer web application where players had to find differences between two images. Built using the MANN stack (MongoDB, Angular, Node.js, and Nest.js)",
+      "icon_link": "./assets/icons/diff_icon.png",
+      "repo_link": "https://github.com/ZakariaZair/PolyDiff",
+      "version_control_icon": "./assets/icons/github_icon.png",
+      "logos_links": [
+        "./assets/icons/ang_icon.png",
+        "./assets/icons/ts_icon.png",
+        "./assets/icons/sql1_icon.png",
+        "./assets/icons/zed_icon.png"
+      ],
+      "full_desc": "The front end application is made in Typescript with the Angular framework. The back end is running on Node.js, made with NestJS and connects to a MongoDB database for data access. The mobile version is made with Flutter. The communication for the network interface uses HTTP and WebSockets protocols. This project was made throughout 2 of my academic years in an Agile environement (SCRUM, prototype, final release). We also used Jasmine and Jest for unit testing, and Postman for network testing. We used Gitlab for version control. The project is an online multiplayer game where all the features works in real time. That includes : CRUD of game rooms, CRUD of friends, personalization of user interface, login and registering, CRUD of game chats. The platform also enables multiples gamemodes, a replay functionality, and a sharing feature with friends.",
+      "slide_show_links": [
+        "./assets/pngs/diff_login.png",
+        "./assets/pngs/diff_register.png",
+        "./assets/pngs/diff_main.png",
+        "./assets/pngs/diff_main2.png",
+        "./assets/pngs/diff_modes.png",
+        "./assets/pngs/diff_lobbyjoin.png",
+        "./assets/pngs/diff_gameplay.png",
+        "./assets/pngs/diff_friends.png",
+        "./assets/pngs/diff_perso.png",
+        "./assets/pngs/diff_chat.png",
+        "./assets/pngs/diff_logs.png"
+      ]
+    },
+    {
       "name": "QT Chess Game",
-      "tiny_desc": "A chessboard game made in Qt, written in C++, compiled in clang++ with script handle in Makefile, compatible on Windows, Linux & MacOS. The project was refactored from an old school project made in 2022.",
+      "tiny_desc": "A chessboard game made in Qt, written in C++, compiled with clang++ with script handle in Makefile, compatible on Windows, Linux & MacOS. The project was refactored from an old university project.",
       "icon_link": "./assets/icons/chess_icon.png",
+      "repo_link": "https://github.com/ZakariaZair/qt_board_game",
+      "version_control_icon": "./assets/icons/github_icon.png",
       "logos_links": [
         "./assets/icons/git_icon.png",
         "./assets/icons/cpp_icon.png",
         "./assets/icons/qt_icon.png",
         "./assets/icons/zed_icon.png"
       ],
-      "full_desc": "",
+      "full_desc": "This project is a refactoring of an old school project : a Chess mock. I decided to reimplement the original features, revisiting each part of the code and improving what I could find. It was very exciting, and I duly noted everything I did in a journal available on the README. The original project's environnement was already provided when I was first landed the task to make this Chess game, but a lot needed to change. Overall, I switched the configuration to be able to compile in clang++ in any platform using qmake (Windows, Linux, MacOS), I removed unused code and duplication code, I improved performance by upgrading all algorithms to O(n) time complexity, I renamed and restructured all the class for better readability, maintenability and modularity, and I finally added more features (board debugging + piece scalability).",
       "slide_show_links": [
         "./assets/gifs/chess_gif.gif",
         "./assets/pngs/chess_bg.png"
       ]
     },
     {
-      "name": "Online Tactical Board (BM Plugin)",
-      "tiny_desc": "Using Angular and NestJS, I built a full-stack web application tactical board for the game Rocket League. Angular, NestJS.",
+      "name": "Online Tactical Board",
+      "tiny_desc": "Using Angular and NestJS, I built a full-stack web application tactical board for the game Rocket League.",
       "icon_link": "./assets/icons/soccer_icon.png",
+      "repo_link": "https://github.com/ZakariaZair/PolyDiff",
+      "version_control_icon": "./assets/icons/github_icon.png",
       "logos_links": [
         "./assets/icons/git_icon.png",
         "./assets/icons/ang_icon.png",
         "./assets/icons/ts_icon.png",
         "./assets/icons/cpp_icon.png",
-        "./assets/icons/vis_icon.png",
-        "./assets/icons/zed_icon.png"
+        "./assets/icons/vis_icon.png"
       ],
       "full_desc": "",
       "slide_show_links": [
@@ -60,8 +90,10 @@
     },
     {
       "name": "Unity Game",
-      "tiny_desc": "I developed a 2D puzzle platformer game.",
+      "tiny_desc": "I developed a 2D puzzle platformer game in Unity in C#.",
       "icon_link": "./assets/icons/unity_icon.png",
+      "repo_link": "https://github.com/ZakariaZair/PolyDiff",
+      "version_control_icon": "./assets/icons/github_icon.png",
       "logos_links": [
         "./assets/icons/git_icon.png",
         "./assets/icons/unity_icon.png",
@@ -72,25 +104,6 @@
       "slide_show_links": [
         "./assets/gifs/un_gif.gif",
         "./assets/pngs/un_unity_editor.png"
-      ]
-    },
-    {
-      "name": "SQL Hotel Reservation",
-      "tiny_desc": "A full-stack web application (client-server) for hotel booking in PostgreSQL. From defining the project configuration with required CTEs to managing advanced user queries, using with relational algebra.",
-      "icon_link": "./assets/icons/hotel_icon.png",
-      "logos_links": [
-        "./assets/icons/git_icon.png",
-        "./assets/icons/ang_icon.png",
-        "./assets/icons/ts_icon.png",
-        "./assets/icons/sql1_icon.png",
-        "./assets/icons/zed_icon.png"
-      ],
-      "full_desc": "",
-      "slide_show_links": [
-        "./assets/pngs/sqlh_mainpage.png",
-        "./assets/pngs/sqlh_hotels.png",
-        "./assets/pngs/sqlh_rooms.png",
-        "./assets/pngs/sqlh_guests.png"
       ]
     }
   ]

@@ -34,8 +34,9 @@
     justify-content: space-evenly;
 }
 .project-full-description {
-    height: 70%;
+    height: 60%;
     width: 35%;
+    padding: 2% 2%;
     border-left: 2px solid black;
     display: flex;
     align-items: center;
@@ -114,14 +115,21 @@
     }
     .slider-holder {
         height: 45%;
+        padding: 5% 0%;
+    }
+    .project-slider-full-desc-holder {
+        flex-direction: column;
     }
     .project-full-description {
+        width: 70%;
         height: 55%;
         display: flex;
         align-items: center;
         justify-content: center;
+        border-left: none;
+        border-top: 2px solid black;
         & span {
-            font-size: 12px;
+            font-size: 11px;
         }
     }
     .content-holder {

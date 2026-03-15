@@ -38,8 +38,8 @@ const profileHolder = document.querySelector(".self-profile");
 for (let i = 0; i < selfData.profile.length; i++) {
   let comment = selfData.profile[i];
   let nodeComm = document.createElement("p");
-  loadAfter(() => timeWriter(nodeComm, comment, 20), 5000 + i * 2200);
-  if (i == 0 || i == 1) nodeComm.style.fontWeight = 850;
+  loadAfter(() => timeWriter(nodeComm, comment, 20), 5000 + i * 1100);
+  if (i < 2) nodeComm.style.fontWeight = 850;
   profileHolder.appendChild(nodeComm);
 }
 
@@ -48,6 +48,8 @@ for (let i = 0; i < selfData.projects.length; i++) {
   let spName = selfData.projects[i].name;
   let spDesc = selfData.projects[i].tiny_desc;
   let spIconLnk = selfData.projects[i].icon_link;
+  let spRepoLnk = selfData.projects[i].repo_link;
+  let spGithubIconLnk = selfData.projects[i].version_control_icon;
 
   const nodePButton = document.createElement("div");
   nodePButton.setAttribute("class", "project-button");
@@ -56,12 +58,22 @@ for (let i = 0; i < selfData.projects.length; i++) {
   nodeIcon.src = spIconLnk;
   setButtonCue(nodePButton);
 
-  const nodePDesc = document.createElement("div");
-  nodePDesc.setAttribute("class", "project-description");
+  const nodePTitle = document.createElement("div");
+  nodePTitle.setAttribute("class", "project-title");
   const nodeName = document.createElement("p");
   nodeName.textContent = spName;
+  const nodeRepoLnk = document.createElement("a")
+  nodeRepoLnk.href = spRepoLnk;
+  nodeRepoLnk.target = "_blank";
+  nodeRepoLnk.rel = "nooopener noreferrer";
+  const nodeGithubIconImg = document.createElement("img")
+  nodeGithubIconImg.src = spGithubIconLnk;
+
+  const nodePDesc = document.createElement("div");
+  nodePDesc.setAttribute("class", "project-description");
   const nodeDesc = document.createElement("p");
   nodeDesc.textContent = spDesc;
+
   const nodePLogos = document.createElement("div");
   nodePLogos.setAttribute("class", "project-logos");
   for (let logoLnk of selfData.projects[i].logos_links) {
@@ -76,7 +88,10 @@ for (let i = 0; i < selfData.projects.length; i++) {
   nodePContainer.setAttribute("class", "project-container");
 
   nodePButton.appendChild(nodeIcon);
-  nodePDesc.appendChild(nodeName);
+  nodePTitle.appendChild(nodeRepoLnk);
+  nodeRepoLnk.appendChild(nodeGithubIconImg);
+  nodePTitle.appendChild(nodeName);
+  nodePDesc.appendChild(nodePTitle);
   nodePDesc.appendChild(nodeDesc);
   nodePContainer.appendChild(nodePButton);
   nodePContainer.appendChild(nodePDesc);
