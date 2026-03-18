@@ -242,6 +242,26 @@ footer {
     transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-bottom: 2px solid gainsboro;
+    transition: opacity 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+    a {
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bolder;
+        color: steelblue;
+    }
+}
+
 /*   */
 /* M */
 /* E */
@@ -311,6 +331,12 @@ footer {
         & img {
             width: 32px;
             height: 32px;
+        }
+    }
+    .project-title {
+        & a img {
+            width: 12px;
+            height: 12px;
         }
     }
 }

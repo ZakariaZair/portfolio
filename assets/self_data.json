@@ -77,7 +77,7 @@
         "./assets/icons/cpp_icon.png",
         "./assets/icons/vis_icon.png"
       ],
-      "full_desc": "",
+      "full_desc": "This project is constitued of 2 standalone applications that were gradually transformed to work hands-inb-hands. It started with the project of a simple web application with the purpose of creating a tactical board for the game Rocket League. It was adapted for all the different gamemode, and it included technical features like drawing on the board, erasing, handling positions alignment of players and ball, visualizing what a player sees at a certain moment, and a video creation to share with friends. Then, the second application came in, and it was the same thing but applied in the GUI of the game directly using the SDK specially made (Bakkesmod, now deprecated). Finally, the 2 projects were fusionned by being to visualize in real-time in 2D the content of the game.",
       "slide_show_links": [
         "./assets/pngs/bm_front.png",
         "./assets/pngs/bm_editor.png",

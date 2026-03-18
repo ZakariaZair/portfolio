@@ -141,3 +141,15 @@ export function setButtonCue(buttonNode) {
 export function loadAfter(callback, timing) {
   setTimeout(callback, timing);
 }
+
+export function disappearAfterScroll(node) {
+  let y = node.getBoundingClientRect().bottom * 10;
+  console.log(y);
+  window.addEventListener("scroll", (event) => {
+    if (window.scrollY <= y) {
+      node.style.opacity = 1;
+    } else {
+      node.style.opacity = 0;
+    }
+  });
+}

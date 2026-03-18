@@ -6,6 +6,7 @@ import {
   listenForPopup,
   initAnimationShow,
   setButtonCue,
+  disappearAfterScroll,
 } from "./helper.js";
 import selfData from "./assets/self_data.json" with { type: "json" };
 
@@ -101,3 +102,10 @@ for (let i = 0; i < selfData.projects.length; i++) {
 
   projectHolder.appendChild(nodePContainer);
 }
+
+const navBar = document.querySelector(".nav-bar");
+const nodeNHome = document.createElement("a");
+nodeNHome.setAttribute("href", "/");
+nodeNHome.textContent = "Home";
+navBar.appendChild(nodeNHome);
+disappearAfterScroll(navBar);
