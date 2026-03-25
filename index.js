@@ -109,3 +109,11 @@ nodeNHome.setAttribute("href", "/");
 nodeNHome.textContent = "Home";
 navBar.appendChild(nodeNHome);
 disappearAfterScroll(navBar);
+
+const footer = document.querySelector("footer");
+const nodeFAbout = document.createElement("div");
+nodeFAbout.setAttribute("class", "about");
+const nodeFDisclaimer = document.createElement("span");
+nodeFDisclaimer.textContent = "*This portfolio was made without any LLMs and with no libraries.*";
+footer.appendChild(nodeFAbout);
+footer.appendChild(nodeFDisclaimer);
