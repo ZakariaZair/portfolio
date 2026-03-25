@@ -3,13 +3,13 @@
     height: 85%;
     border-radius: 20px;
     background-color: white;
-    border: 3px solid dimgray;
+    border: 3px solid whitesmoke;
     border-radius: 25px;
-    box-shadow: 0px 0px 6px lightblue;
+    box-shadow: 0px 0px 6px midnightblue;
 }
 
 .project-name {
-    height: 10%;
+    height: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@
     }
 }
 .project-slider-full-desc-holder {
-    height: 90%;
+    height: 70%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -114,10 +114,11 @@
         }
     }
     .slider-holder {
-        height: 45%;
+        height: 65%;
         padding: 5% 0%;
     }
     .project-slider-full-desc-holder {
+        height: 95%;
         flex-direction: column;
     }
     .project-full-description {

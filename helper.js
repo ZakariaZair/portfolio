@@ -39,6 +39,7 @@ export function initAnimationShow(node) {
 function scrollToShow(node) {
   if (node.style.opacity >= 1) return;
   let y = node.getBoundingClientRect().top;
+  console.log(window.scrollY);
   if (window.scrollY >= y) {
     node.style.opacity = 1;
     node.style.transform = "translate(0, 20px)";

@@ -1,12 +1,10 @@
 {
   "name": "Zakaria Zair",
-  "description": "I am a Software professional who loves developing applications that helps people.",
+  "description": "I am a software professional building applications that deliver meaningful value.",
   "profile": [
-    "Interested in data engineering, solution modeling, neural networks, computer graphics optimizations, 3D physics simulations",
-    "Strong communication skills (EN, FR)",
-    "Favorite Languages : Python, C++, Typescript, SQL, Java",
-    "Tech : AWS, GCP, Docker, WebSockets, Postgres, Unity, Unreal Engine, OpenGL, Vulkan",
-    "Tools : Git, GitLab, Jira, Postman, Tmux, Zed"
+    "Graduated in Software Engineering from Polytechnique Montréal, with a concentration in AI and Data Science.",
+    "Interests span multiple domains, including 3D physics simulations and medical research.",
+    "Strong communication skills in French and English."
   ],
   "self_links": [
     {
@@ -19,6 +17,30 @@
     }
   ],
   "projects": [
+    {
+      "name": "ApexTransit",
+      "tiny_desc": "An analysis tool for transit agencies to evaluate their predictions algorithms based on the ETA Accuracy Benchmark. Built using React, Python, Polars and PostgreSQL.",
+      "icon_link": "./assets/icons/apex_icon.png",
+      "repo_link": "https://github.com/TransitApp/ETA-Accuracy-Benchmark",
+      "version_control_icon": "./assets/icons/github_icon.png",
+      "logos_links": [
+        "./assets/icons/git_icon.png",
+        "./assets/icons/react_icon.png",
+        "./assets/icons/py_icon.png",
+        "./assets/icons/sql1_icon.png",
+        "./assets/icons/zed_icon.png"
+      ],
+      "full_desc": "This project was developed as a data analysis platform built on a scalable layered architecture, separating the presentation, business logic, and data access layers to reduce coupling and support long-term extensibility. The frontend was implemented using React, Next.js, and Tailwind CSS to deliver a responsive and modern user interface, while the backend relies on a FastAPI-based service connected to a database for efficient data management. The system is containerized with Docker to ensure consistent and reproducible deployment, and leverages Polars for high-performance processing of large datasets. Clear architectural patterns and coding conventions were adopted to maintain consistency and allow new features to be integrated without impacting existing components.",
+      "slide_show_links": [
+        "./assets/pngs/apex_main.png",
+        "./assets/pngs/apex_about.png",
+        "./assets/pngs/apex_select.png",
+        "./assets/pngs/apex_treat.png",
+        "./assets/pngs/apex_dashboard.png",
+        "./assets/pngs/apex_graph.png",
+        "./assets/pngs/apex_table.png"
+      ]
+    },
     {
       "name": "7 Difference Online Application",
       "tiny_desc": "Online multiplayer web application where players had to find differences between two images. Built using the MANN stack (MongoDB, Angular, Node.js, and Nest.js)",

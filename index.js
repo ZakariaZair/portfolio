@@ -15,11 +15,11 @@ closePopup(".popup-holder");
 
 const myName = selfData.name;
 const nodeName = document.querySelector(".self-name").querySelector("h1");
-loadAfter(() => timeWriter(nodeName, myName, 200), 200);
+loadAfter(() => timeWriter(nodeName, myName, 100), 200);
 
 const myDesc = selfData.description;
 const nodeDesc = document.querySelector(".self-description").querySelector("p");
-loadAfter(() => timeWriter(nodeDesc, myDesc, 25), 3000);
+loadAfter(() => timeWriter(nodeDesc, myDesc, 25), 2600);
 
 loadAfter(() => {
   const nodeLinks = document.querySelector(".self-links");
@@ -33,13 +33,13 @@ loadAfter(() => {
     nodeHref.append(nodeIcon);
     nodeLinks.appendChild(nodeHref);
   }
-}, 5000);
+}, 4600);
 
 const profileHolder = document.querySelector(".self-profile");
 for (let i = 0; i < selfData.profile.length; i++) {
   let comment = selfData.profile[i];
   let nodeComm = document.createElement("p");
-  loadAfter(() => timeWriter(nodeComm, comment, 20), 5000 + i * 1100);
+  loadAfter(() => timeWriter(nodeComm, comment, 20), 4600 + i * 2000);
   if (i < 2) nodeComm.style.fontWeight = 850;
   profileHolder.appendChild(nodeComm);
 }

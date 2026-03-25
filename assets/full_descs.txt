@@ -1,5 +1,8 @@
 CONSEIL - MOINS DE 900 CHARs (surligne et tu vois en bas a droite de l'IDE)
 
+## ApexTransit
+This project was developed as a data analysis platform built on a scalable layered architecture, separating the presentation, business logic, and data access layers to reduce coupling and support long-term extensibility. The frontend was implemented using React, Next.js, and Tailwind CSS to deliver a responsive and modern user interface, while the backend relies on a FastAPI-based service connected to a database for efficient data management. The system is containerized with Docker to ensure consistent and reproducible deployment, and leverages Polars for high-performance processing of large datasets. Clear architectural patterns and coding conventions were adopted to maintain consistency and allow new features to be integrated without impacting existing components.
+
 ## 7 Difference Application
 The front end application is made in Typescript with the Angular framework. The back end is running on Node.js, made with NestJS and connects to a MongoDB database for data access. The mobile version is made with Flutter. The communication for the network interface uses HTTP and WebSockets protocols. This project was made throughout 2 of my academic years in an Agile environement (SCRUM, prototype, final release). We also used Jasmine and Jest for unit testing, and Postman for network testing. We used Gitlab for version control. The project is an online multiplayer game where all the features works in real time. That includes : CRUD of game rooms, CRUD of friends, personalization of user interface, login and registering, CRUD of game chats. The platform also enables multiples gamemodes, a replay functionality, and a sharing feature with friends.
 
@@ -12,4 +15,3 @@ This project is a refactoring of an old school project : a Chess mock. I decided
 This project is constitued of 2 standalone applications that were gradually transformed to work hands-inb-hands. It started with the project of a simple web application with the purpose of creating a tactical board for the game Rocket League. It was adapted for all the different gamemode, and it included technical features like drawing on the board, erasing, handling positions alignment of players and ball, visualizing what a player sees at a certain moment, and a video creation to share with friends. Then, the second application came in, and it was the same thing but applied in the GUI of the game directly using the SDK specially made (Bakkesmod, now deprecated). Finally, the 2 projects were fusionned by being to visualize in real-time in 2D the content of the game.
 
 ## Unity Game
-
