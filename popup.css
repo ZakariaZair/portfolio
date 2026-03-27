@@ -114,15 +114,36 @@
         }
     }
     .slider-holder {
-        height: 65%;
+        height: 45%;
+        width: 100%;
         padding: 5% 0%;
+
+        & .slider-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        & .slider-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & img {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
     .project-slider-full-desc-holder {
         height: 95%;
         flex-direction: column;
     }
     .project-full-description {
-        width: 70%;
+        width: 90%;
         height: 55%;
         display: flex;
         align-items: center;
@@ -135,7 +156,7 @@
     }
     .content-holder {
         & img {
-            height: 250px;
+            height: 170px;
             min-height: 90px;
             min-width: 70px;
         }
