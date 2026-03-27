@@ -1,6 +1,7 @@
 var controller = new AbortController();
 var signal = controller.signal;
 var sliderIndex = 0;
+var viewportMiddleHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0) / 2 ;
 
 export function hotReload(timing) {
   setTimeout(() => {
@@ -39,7 +40,7 @@ export function initAnimationShow(node) {
 function scrollToShow(node) {
   if (node.style.opacity >= 1) return;
   let y = node.getBoundingClientRect().top;
-  if (window.scrollY >= y) {
+  if (y <= viewportMiddleHeight) {
     node.style.opacity = 1;
     node.style.transform = "translate(0, 20px)";
     node.style.transform = "translate(0, -20px)";
