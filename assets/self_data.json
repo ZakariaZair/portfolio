@@ -90,7 +90,7 @@
       "name": "Online Tactical Board",
       "tiny_desc": "Using Angular and NestJS, I built a full-stack web application tactical board for the game Rocket League.",
       "icon_link": "./assets/icons/soccer_icon.png",
-      "repo_link": "https://github.com/ZakariaZair/PolyDiff",
+      "repo_link": "https://github.com/ZakariaZair/rl_bird_view",
       "version_control_icon": "./assets/icons/github_icon.png",
       "logos_links": [
         "./assets/icons/git_icon.png",
@@ -114,7 +114,7 @@
       "name": "Unity Game",
       "tiny_desc": "I developed a 2D puzzle platformer game in Unity in C#.",
       "icon_link": "./assets/icons/unity_icon.png",
-      "repo_link": "https://github.com/ZakariaZair/PolyDiff",
+      "repo_link": "https://github.com/ZakariaZair/unity_game",
       "version_control_icon": "./assets/icons/github_icon.png",
       "logos_links": [
         "./assets/icons/git_icon.png",

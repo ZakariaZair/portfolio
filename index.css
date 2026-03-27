@@ -103,8 +103,8 @@ main {
     & .project-container:nth-child(even) {
         flex-direction: row-reverse;
         & .project-description {
-            padding-left: 10%;
-            margin-left: 12%;
+            padding-left: 5%;
+            margin-left: 6%;
             border-left: 2px solid black;
             border-radius: 2px;
         }
@@ -112,8 +112,8 @@ main {
     & .project-container:nth-child(odd) {
         flex-direction: row;
         & .project-description {
-            padding-right: 10%;
-            margin-right: 12%;
+            padding-right: 5%;
+            margin-right: 6%;
             border-right: 2px solid black;
             border-radius: 2px;
         }
@@ -206,7 +206,7 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    width: 21%;
+    width: 25%;
     height: 128px;
     & img {
         width: 64px;
@@ -332,10 +332,7 @@ nav {
     }
     .project-description {
         height: 50%;
-        & p:first-child {
-            font-size: 12px;
-        }
-        & p:nth-child(2) {
+        & p {
             font-size: 8px;
             text-align: center;
         }
@@ -347,6 +344,9 @@ nav {
         }
     }
     .project-title {
+        & p {
+            font-size: 9px;
+        }
         & a img {
             width: 12px;
             height: 12px;
