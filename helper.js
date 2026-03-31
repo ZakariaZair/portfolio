@@ -128,7 +128,7 @@ export function closePopup(closeInfo) {
 
 export function setButtonCue(buttonNode) {
   const cueNode = document.createElement("span");
-  cueNode.textContent = "Click here to view";
+  cueNode.textContent = "View Project";
   buttonNode.appendChild(cueNode);
   const removeCue = () => {
     cueNode.style.opacity = 0;
