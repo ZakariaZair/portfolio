@@ -1,6 +1,6 @@
 {
   "name": "Zakaria Zair",
-  "description": "Software engineer building scalable applications and shipping production-ready solutions under tight deadlines.",
+  "description": "Software Developer building scalable applications and shipping production-ready solutions under tight deadlines.",
   "profile": [
     "Graduated in Software Engineering from Polytechnique Montréal, with a concentration in AI and Data Science.",
     "Interests span multiple domains, including 3D physics simulations and medical research.",
@@ -19,7 +19,7 @@
   "projects": [
     {
       "name": "ApexTransit",
-      "tiny_desc": "An analysis tool for transit agencies to evaluate their predictions algorithms based on the ETA Accuracy Benchmark. Built using React, Python, Polars and PostgreSQL.",
+      "tiny_desc": "Built a data analysis platform to evaluate transit prediction accuracy using real-time data, enabling better decision-making for transit agencies. Processed large-scale real-time data efficiently using optimized pipelines with Polars.",
       "icon_link": "./assets/icons/apex_icon.png",
       "repo_link": "https://github.com/TransitApp/ETA-Accuracy-Benchmark",
       "version_control_icon": "./assets/icons/github_icon.png",
@@ -43,7 +43,7 @@
     },
     {
       "name": "7 Difference Online Application",
-      "tiny_desc": "Online multiplayer web application where players had to find differences between two images. Built using the MANN stack (MongoDB, Angular, Node.js, and Nest.js)",
+      "tiny_desc": "Online multiplayer web application where players identify differences between two images in real time. Designed and implemented using the MANN stack (MongoDB, Angular, Node.js, NestJS), with a focus on responsive gameplay and scalable backend interactions.",
       "icon_link": "./assets/icons/diff_icon.png",
       "repo_link": "https://github.com/ZakariaZair/PolyDiff",
       "version_control_icon": "./assets/icons/github_icon.png",
@@ -70,7 +70,7 @@
     },
     {
       "name": "QT Chess Game",
-      "tiny_desc": "A chessboard game made in Qt, written in C++, compiled with clang++ with script handle in Makefile, compatible on Windows, Linux & MacOS. The project was refactored from an old university project.",
+      "tiny_desc": "Cross-platform chess application developed in C++ using Qt, supporting Windows, Linux, and macOS. Refactored from an existing codebase to improve structure, maintainability, and build automation using Makefile and clang++.",
       "icon_link": "./assets/icons/chess_icon.png",
       "repo_link": "https://github.com/ZakariaZair/qt_board_game",
       "version_control_icon": "./assets/icons/github_icon.png",
@@ -88,7 +88,7 @@
     },
     {
       "name": "Online Tactical Board",
-      "tiny_desc": "Using Angular and NestJS, I built a full-stack web application tactical board for the game Rocket League.",
+      "tiny_desc": "Full-stack web application built with Angular and NestJS, enabling users to create and interact with tactical plays for Rocket League. Designed to support real-time interactions and an intuitive user experience for strategy visualization.",
       "icon_link": "./assets/icons/soccer_icon.png",
       "repo_link": "https://github.com/ZakariaZair/rl_bird_view",
       "version_control_icon": "./assets/icons/github_icon.png",
@@ -112,7 +112,7 @@
     },
     {
       "name": "Unity Game",
-      "tiny_desc": "I developed a 2D puzzle platformer game in Unity in C#.",
+      "tiny_desc": "2D puzzle platformer game developed in Unity using C#. Designed core gameplay mechanics and implemented game logic, focusing on smooth player experience and level interaction.",
       "icon_link": "./assets/icons/unity_icon.png",
       "repo_link": "https://github.com/ZakariaZair/unity_game",
       "version_control_icon": "./assets/icons/github_icon.png",
