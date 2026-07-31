@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Quantico", sans-serif;
     & span {
         font-size: 40px;
         width: 100%;

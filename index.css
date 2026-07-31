@@ -1,5 +1,5 @@
 html {
-    font-family: "Quantico", sans-serif;
+    font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
 body {
@@ -8,15 +8,15 @@ body {
 
 header {
     width: 100%;
-    height: 70vh;
+    height: 500px;
     padding: 0;
     margin: 0;
-    background: center/100% url("assets/up_bg.png");
+    background-color: rgb(240, 245, 249);
 }
 
 .self-holder {
     width: 80%;
-    height: 100%;
+    height: 500px;
     margin: 0 10%;
     display: flex;
     justify-content: flex-start;
@@ -36,6 +36,8 @@ header {
         padding: 0;
         margin: 0;
         font-size: 90px;
+        font-family: "Quantico", sans-serif;
+        font-weight: 700;
     }
 }
 
@@ -50,6 +52,7 @@ header {
         padding: 0;
         margin: 0;
         font-size: 24px;
+        font-family: "Quantico", sans-serif;
     }
 }
 
@@ -84,6 +87,7 @@ header {
     & p {
         font-size: 16px;
         margin: 2px 0;
+        line-height: 1.45;
     }
 }
 
@@ -91,7 +95,7 @@ main {
     width: 100%;
     padding: 0;
     margin: 0;
-    background: center/100% url("assets/up_bg.png");
+    background-color: rgb(240, 245, 249);
 }
 
 .projects-holder {
@@ -100,7 +104,7 @@ main {
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    & .project-container:nth-child(even) {
+    /*& .project-container:nth-child(even) {
         flex-direction: row-reverse;
         & .project-description {
             padding-left: 5%;
@@ -117,7 +121,8 @@ main {
             border-right: 2px solid black;
             border-radius: 2px;
         }
-    }
+    }*/
+
 }
 
 .project-container {
@@ -143,6 +148,8 @@ main {
     justify-content: center;
     & span {
         font-size: 20px;
+        font-family: "Quantico", sans-serif;
+        font-weight: 700;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -175,6 +182,8 @@ main {
     & p {
         font-size: 16px;
         text-align: center;
+        font-weight: 400;
+        line-height: 1.45;
     }
 }
 
@@ -182,6 +191,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    font-family: "Quantico", sans-serif;
     & p {
         font-size: 24px;
     }
@@ -202,7 +212,7 @@ main {
 }
 
 .project-logos {
-    display: flexbox;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
@@ -224,7 +234,7 @@ footer {
     height: 300px;
     padding: 0;
     margin: 0;
-    background: no-repeat center/100% url("assets/foot_bg.png");
+    background-color: rgb(240, 245, 249);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -263,8 +273,8 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    height: 50px;
-    background-color: white;
+    height: 95px;
+    background-color: rgb(240, 245, 249);
     border-bottom: 2px solid gainsboro;
     transition: opacity 0.2s cubic-bezier(0.19, 1, 0.22, 1);
     a {
@@ -292,7 +302,7 @@ nav {
 
 @media screen and (max-width: 800px) {
     header {
-        height: 60vh;
+        height: 20vh;
     }
     .self-name {
         justify-content: center;
@@ -314,20 +324,20 @@ nav {
         }
     }
     .project-container {
-        height: 225px;
+        height: 512px;
         flex-direction: column;
     }
     .project-button {
-        width: 64px;
-        height: 64px;
+        width: 256px;
+        height: 128px;
         & span {
-            font-size: 10px;
-            width: 64px;
-            height: 64px;
+            font-size: 8px;
+            width: 256px;
+            height: 128px;
         }
         & img {
-            width: 64px;
-            height: 64px;
+            width: 96px;
+            height: 96px;
         }
     }
     .project-description {
@@ -338,9 +348,10 @@ nav {
         }
     }
     .project-logos {
+        width: 100%;
         & img {
-            width: 32px;
-            height: 32px;
+            width: 64px;
+            height: 64px;
         }
     }
     .project-title {

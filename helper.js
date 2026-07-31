@@ -144,7 +144,7 @@ export function loadAfter(callback, timing) {
 }
 
 export function disappearAfterScroll(node) {
-  let y = node.getBoundingClientRect().bottom * 10;
+  let y = node.getBoundingClientRect().bottom * 5;
   console.log(y);
   window.addEventListener("scroll", (event) => {
     if (window.scrollY <= y) {

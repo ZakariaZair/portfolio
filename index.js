@@ -105,7 +105,7 @@ for (let i = 0; i < selfData.projects.length; i++) {
 
 const navBar = document.querySelector(".nav-bar");
 const nodeNHome = document.createElement("a");
-nodeNHome.setAttribute("href", "/");
+nodeNHome.setAttribute("href", "/portfolio");
 nodeNHome.textContent = "Home";
 navBar.appendChild(nodeNHome);
 disappearAfterScroll(navBar);
@@ -114,6 +114,6 @@ const footer = document.querySelector("footer");
 const nodeFAbout = document.createElement("div");
 nodeFAbout.setAttribute("class", "about");
 const nodeFDisclaimer = document.createElement("span");
-nodeFDisclaimer.textContent = "*This portfolio was made without any LLMs and with no libraries.*";
+nodeFDisclaimer.textContent = "*This portfolio was made for recruiters to better understand my profile*";
 footer.appendChild(nodeFAbout);
 footer.appendChild(nodeFDisclaimer);
