@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="diff-title diff-desc">
+  <title id="diff-title">Difference comparison</title>
+  <desc id="diff-desc">Two image panels compared with a magnifying glass</desc>
+  <g fill="none" stroke="#182A36" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+    <rect x="24" y="42" width="92" height="132" rx="8"/>
+    <rect x="140" y="42" width="92" height="132" rx="8"/>
+    <path d="m38 141 22-31 17 20 13-13 12 24m52 0 22-31 17 20 13-13 12 24"/>
+    <circle cx="91" cy="73" r="9" fill="#182A36" stroke="none"/>
+    <circle cx="207" cy="73" r="9"/>
+    <circle cx="174" cy="173" r="38" fill="#fff"/>
+    <path d="m201 200 30 30"/>
+    <path d="M158 173h32m-16-16v32" stroke="#D95D4F"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="typescript-title">
+  <title id="typescript-title">TypeScript</title>
+  <rect x="30" y="30" width="196" height="196" rx="22" fill="none" stroke="#3B78A0" stroke-width="9"/>
+  <path d="M30 72h196" stroke="#D95D4F" stroke-width="9"/>
+  <text x="128" y="171" fill="#182A36" font-family="Arial, sans-serif" font-size="77" font-weight="700" letter-spacing="-4" text-anchor="middle">TS</text>
+</svg>

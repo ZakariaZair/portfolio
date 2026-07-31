@@ -9,26 +9,69 @@
   "self_links": [
     {
       "net_link": "https://www.linkedin.com/in/zakaria-zair-2793ba23a",
-      "icon_link": "./assets/icons/lk_icon.png"
+      "icon_link": "./assets/svgs/linkedin-original.svg"
     },
     {
       "net_link": "https://github.com/ZakariaZair",
-      "icon_link": "./assets/icons/github_icon.png"
+      "icon_link": "./assets/svgs/github-original.svg"
     }
   ],
   "projects": [
     {
+      "name": "PartNApp",
+      "tiny_desc": "Multi-platform partnership marketplace spanning Expo and React Native mobile, React and Vite web, an ASP.NET Core .NET 10 API, and Supabase/PostgreSQL. Users publish project offers, discover collaborators, and express interest through shared product workflows.",
+      "icon_link": "./assets/svgs/partnapp_icon.svg",
+      "repo_link": "https://github.com/ZakariaZair/partnapp",
+      "version_control_icon": "./assets/svgs/github-original.svg",
+      "logos_links": [
+        "./assets/svgs/git-original.svg",
+        "./assets/svgs/expo_icon.svg",
+        "./assets/svgs/react-original.svg",
+        "./assets/svgs/typescript-original.svg",
+        "./assets/svgs/vitejs-original.svg",
+        "./assets/svgs/csharp-original.svg",
+        "./assets/svgs/postgresql-original.svg",
+        "./assets/svgs/supabase-original.svg"
+      ],
+      "full_desc": "PartNApp is a multi-platform marketplace for connecting project owners with reliable, complementary partners. The monorepo separates an Expo and React Native mobile app for iOS and Android, an independent React and Vite web client, an ASP.NET Core Minimal API targeting .NET 10, and Supabase/PostgreSQL migrations. The API exposes typed flows for profiles, partnership offers, and expressions of interest. The database defines profiles, offers, and interests with row-level security policies prepared around Supabase Auth. This separation gives each client its own release cycle while keeping product contracts and data responsibilities explicit.",
+      "slide_show_links": [
+        "./assets/pngs/partnapp-ios-home.png",
+        "./assets/pngs/partnapp-ios-offers.png",
+        "./assets/pngs/partnapp-ios-publish.png"
+      ]
+    },
+    {
+      "name": "Pixel Rune",
+      "tiny_desc": "Cross-platform mobile personalization app built with Expo, React Native, and TypeScript. Users can select or draw 16×16 pixel-art Runes, persist an active design locally, and prepare it for an iOS WidgetKit home-screen widget.",
+      "icon_link": "./assets/svgs/pixel-rune-icon.svg",
+      "repo_link": "https://github.com/ZakariaZair/pixel_rune",
+      "version_control_icon": "./assets/svgs/github-original.svg",
+      "logos_links": [
+        "./assets/svgs/git-original.svg",
+        "./assets/svgs/react-original.svg",
+        "./assets/svgs/typescript-original.svg",
+        "./assets/svgs/expo_icon.svg",
+        "./assets/svgs/zed_icon.svg"
+      ],
+      "full_desc": "Pixel Rune is a cross-platform mobile personalization app built with Expo SDK 57, React Native, and TypeScript. It supports browsing built-in Runes, selecting and locally persisting an active design, and creating custom 16×16 pixel art through an in-app editor. The Rune model is serializable so the same design can be shared with a native iOS WidgetKit extension. A local Expo config plugin generates the SwiftUI widget target and App Group bridge during prebuild or EAS builds, keeping the native integration reproducible without committing generated iOS output. The repository also prepares Supabase, Sentry, PostHog, and RevenueCat integrations for later product slices.",
+      "slide_show_links": [
+        "./assets/pngs/pixel-rune-rune-screen.png",
+        "./assets/pngs/pixel-rune-create-screen.png",
+        "./assets/pngs/pixel-rune-community-screen.png"
+      ]
+    },
+    {
       "name": "ApexTransit",
       "tiny_desc": "Built a data analysis platform to evaluate transit prediction accuracy using real-time data, enabling better decision-making for transit agencies. Processed large-scale real-time data efficiently using optimized pipelines with Polars.",
-      "icon_link": "./assets/icons/apex_icon.png",
+      "icon_link": "./assets/svgs/apex_icon.svg",
       "repo_link": "https://github.com/TransitApp/ETA-Accuracy-Benchmark",
-      "version_control_icon": "./assets/icons/github_icon.png",
+      "version_control_icon": "./assets/svgs/github-original.svg",
       "logos_links": [
-        "./assets/icons/git_icon.png",
-        "./assets/icons/react_icon.png",
-        "./assets/icons/py_icon.png",
-        "./assets/icons/sql1_icon.png",
-        "./assets/icons/zed_icon.png"
+        "./assets/svgs/git-original.svg",
+        "./assets/svgs/react-original.svg",
+        "./assets/svgs/python-original.svg",
+        "./assets/svgs/sql_icon.svg",
+        "./assets/svgs/zed_icon.svg"
       ],
       "full_desc": "This project was developed as a data analysis platform built on a scalable layered architecture, separating the presentation, business logic, and data access layers to reduce coupling and support long-term extensibility. The frontend was implemented using React, Next.js, and Tailwind CSS to deliver a responsive and modern user interface, while the backend relies on a FastAPI-based service connected to a database for efficient data management. The system is containerized with Docker to ensure consistent and reproducible deployment, and leverages Polars for high-performance processing of large datasets. Clear architectural patterns and coding conventions were adopted to maintain consistency and allow new features to be integrated without impacting existing components.",
       "slide_show_links": [
@@ -44,14 +87,14 @@
     {
       "name": "7 Difference Online Application",
       "tiny_desc": "Online multiplayer web application where players identify differences between two images in real time. Designed and implemented using the MANN stack (MongoDB, Angular, Node.js, NestJS), with a focus on responsive gameplay and scalable backend interactions.",
-      "icon_link": "./assets/icons/diff_icon.png",
+      "icon_link": "./assets/svgs/diff_icon.svg",
       "repo_link": "https://github.com/ZakariaZair/PolyDiff",
-      "version_control_icon": "./assets/icons/github_icon.png",
+      "version_control_icon": "./assets/svgs/github-original.svg",
       "logos_links": [
-        "./assets/icons/ang_icon.png",
-        "./assets/icons/ts_icon.png",
-        "./assets/icons/sql1_icon.png",
-        "./assets/icons/zed_icon.png"
+        "./assets/svgs/angular-original.svg",
+        "./assets/svgs/typescript-original.svg",
+        "./assets/svgs/sql_icon.svg",
+        "./assets/svgs/zed_icon.svg"
       ],
       "full_desc": "The front end application is made in Typescript with the Angular framework. The back end is running on Node.js, made with NestJS and connects to a MongoDB database for data access. The mobile version is made with Flutter. The communication for the network interface uses HTTP and WebSockets protocols. This project was made throughout 2 of my academic years in an Agile environement (SCRUM, prototype, final release). We also used Jasmine and Jest for unit testing, and Postman for network testing. We used Gitlab for version control. The project is an online multiplayer game where all the features works in real time. That includes : CRUD of game rooms, CRUD of friends, personalization of user interface, login and registering, CRUD of game chats. The platform also enables multiples gamemodes, a replay functionality, and a sharing feature with friends.",
       "slide_show_links": [
@@ -71,14 +114,14 @@
     {
       "name": "QT Chess Game",
       "tiny_desc": "Cross-platform chess application developed in C++ using Qt, supporting Windows, Linux, and macOS. Refactored from an existing codebase to improve structure, maintainability, and build automation using Makefile and clang++.",
-      "icon_link": "./assets/icons/chess_icon.png",
+      "icon_link": "./assets/svgs/chess_icon.svg",
       "repo_link": "https://github.com/ZakariaZair/qt_board_game",
-      "version_control_icon": "./assets/icons/github_icon.png",
+      "version_control_icon": "./assets/svgs/github-original.svg",
       "logos_links": [
-        "./assets/icons/git_icon.png",
-        "./assets/icons/cpp_icon.png",
-        "./assets/icons/qt_icon.png",
-        "./assets/icons/zed_icon.png"
+        "./assets/svgs/git-original.svg",
+        "./assets/svgs/cplusplus-original.svg",
+        "./assets/svgs/qt-original.svg",
+        "./assets/svgs/zed_icon.svg"
       ],
       "full_desc": "This project is a refactoring of an old school project : a Chess mock. I decided to reimplement the original features, revisiting each part of the code and improving what I could find. It was very exciting, and I duly noted everything I did in a journal available on the README. The original project's environnement was already provided when I was first landed the task to make this Chess game, but a lot needed to change. Overall, I switched the configuration to be able to compile in clang++ in any platform using qmake (Windows, Linux, MacOS), I removed unused code and duplication code, I improved performance by upgrading all algorithms to O(n) time complexity, I renamed and restructured all the class for better readability, maintenability and modularity, and I finally added more features (board debugging + piece scalability).",
       "slide_show_links": [
@@ -89,15 +132,15 @@
     {
       "name": "Online Tactical Board",
       "tiny_desc": "Full-stack web application built with Angular and NestJS, enabling users to create and interact with tactical plays for Rocket League. Designed to support real-time interactions and an intuitive user experience for strategy visualization.",
-      "icon_link": "./assets/icons/soccer_icon.png",
+      "icon_link": "./assets/svgs/soccer_icon.svg",
       "repo_link": "https://github.com/ZakariaZair/rl_bird_view",
-      "version_control_icon": "./assets/icons/github_icon.png",
+      "version_control_icon": "./assets/svgs/github-original.svg",
       "logos_links": [
-        "./assets/icons/git_icon.png",
-        "./assets/icons/ang_icon.png",
-        "./assets/icons/ts_icon.png",
-        "./assets/icons/cpp_icon.png",
-        "./assets/icons/vis_icon.png"
+        "./assets/svgs/git-original.svg",
+        "./assets/svgs/angular-original.svg",
+        "./assets/svgs/typescript-original.svg",
+        "./assets/svgs/cplusplus-original.svg",
+        "./assets/svgs/visualstudio-original.svg"
       ],
       "full_desc": "This project is constitued of 2 standalone applications that were gradually transformed to work hands-inb-hands. It started with the project of a simple web application with the purpose of creating a tactical board for the game Rocket League. It was adapted for all the different gamemode, and it included technical features like drawing on the board, erasing, handling positions alignment of players and ball, visualizing what a player sees at a certain moment, and a video creation to share with friends. Then, the second application came in, and it was the same thing but applied in the GUI of the game directly using the SDK specially made (Bakkesmod, now deprecated). Finally, the 2 projects were fusionned by being to visualize in real-time in 2D the content of the game.",
       "slide_show_links": [
@@ -113,14 +156,14 @@
     {
       "name": "Unity Game",
       "tiny_desc": "2D puzzle platformer game developed in Unity using C#. Designed core gameplay mechanics and implemented game logic, focusing on smooth player experience and level interaction.",
-      "icon_link": "./assets/icons/unity_icon.png",
+      "icon_link": "./assets/svgs/unity-original.svg",
       "repo_link": "https://github.com/ZakariaZair/unity_game",
-      "version_control_icon": "./assets/icons/github_icon.png",
+      "version_control_icon": "./assets/svgs/github-original.svg",
       "logos_links": [
-        "./assets/icons/git_icon.png",
-        "./assets/icons/unity_icon.png",
-        "./assets/icons/csharp_icon.png",
-        "./assets/icons/zed_icon.png"
+        "./assets/svgs/git-original.svg",
+        "./assets/svgs/unity-original.svg",
+        "./assets/svgs/csharp-original.svg",
+        "./assets/svgs/zed_icon.svg"
       ],
       "full_desc": "",
       "slide_show_links": [

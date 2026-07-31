@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="python-title">
+  <title id="python-title">Python</title>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="11">
+    <path d="M48 119V78c0-25 20-45 45-45h44c20 0 36 16 36 36v37H98c-22 0-40 18-40 40v13" stroke="#3B78A0"/>
+    <path d="M208 137v41c0 25-20 45-45 45h-44c-20 0-36-16-36-36v-37h75c22 0 40-18 40-40V97" stroke="#182A36"/>
+  </g>
+  <circle cx="111" cy="64" r="8" fill="#D95D4F"/>
+  <circle cx="145" cy="192" r="8" fill="#D95D4F"/>
+</svg>

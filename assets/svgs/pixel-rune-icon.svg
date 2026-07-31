@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="pixel-rune-title pixel-rune-desc">
+  <title id="pixel-rune-title">Pixel Rune</title>
+  <desc id="pixel-rune-desc">A mobile pixel editor displaying a custom Rune</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="39" y="20" width="178" height="216" rx="24" stroke="#3B78A0" stroke-width="9"/>
+    <path d="M99 39h58" stroke="#D95D4F" stroke-width="8"/>
+    <rect x="59" y="57" width="138" height="138" rx="10" stroke="#182A36" stroke-width="8"/>
+    <g stroke="#3B78A0" stroke-width="3" opacity=".22">
+      <path d="M82 61v130m23-130v130m23-130v130m23-130v130m23-130v130"/>
+      <path d="M63 80h130M63 103h130M63 126h130M63 149h130M63 172h130"/>
+    </g>
+    <path d="M103 215h50" stroke="#182A36" stroke-width="8"/>
+  </g>
+  <g shape-rendering="crispEdges">
+    <path fill="#3B78A0" d="M116 76h24v24h24v24h24v24h-24v24h-24v24h-24v-24H92v-24H68v-24h24v-24h24V76Z"/>
+    <path fill="#D95D4F" d="M116 100h24v24h-24v-24Zm-24 24h24v24H92v-24Zm24 24h24v24h-24v-24Zm24-24h24v24h-24v-24Z"/>
+    <path fill="#182A36" d="M116 124h24v24h-24v-24Z"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="postgres-title postgres-desc">
+  <title id="postgres-title">PostgreSQL</title>
+  <desc id="postgres-desc">A PostgreSQL database badge</desc>
+  <g fill="none" stroke="#3B78A0" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+    <ellipse cx="128" cy="53" rx="82" ry="26"/>
+    <path d="M46 53v150c0 14 37 26 82 26s82-12 82-26V53"/>
+    <path d="M46 103c0 14 37 26 82 26s82-12 82-26m-164 50c0 14 37 26 82 26s82-12 82-26" opacity=".65"/>
+  </g>
+  <rect x="79" y="101" width="98" height="54" rx="8" fill="#D95D4F"/>
+  <text x="128" y="139" fill="#fff" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="2" text-anchor="middle">PG</text>
+</svg>

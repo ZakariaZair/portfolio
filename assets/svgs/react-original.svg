@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="react-title">
+  <title id="react-title">React</title>
+  <g fill="none" stroke="#3B78A0" stroke-width="8">
+    <ellipse cx="128" cy="128" rx="102" ry="40"/>
+    <ellipse cx="128" cy="128" rx="102" ry="40" transform="rotate(60 128 128)"/>
+    <ellipse cx="128" cy="128" rx="102" ry="40" transform="rotate(120 128 128)"/>
+  </g>
+  <circle cx="128" cy="128" r="17" fill="#D95D4F"/>
+  <circle cx="128" cy="128" r="7" fill="#182A36"/>
+</svg>

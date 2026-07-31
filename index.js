@@ -80,9 +80,7 @@ for (let i = 0; i < selfData.projects.length; i++) {
   for (let logoLnk of selfData.projects[i].logos_links) {
     let nodeLogo = document.createElement("img");
     nodeLogo.src = logoLnk;
-    i % 2 == 0
-      ? nodePLogos.appendChild(nodeLogo)
-      : nodePLogos.prepend(nodeLogo);
+    nodePLogos.appendChild(nodeLogo);
   }
 
   const nodePContainer = document.createElement("div");
@@ -105,7 +103,7 @@ for (let i = 0; i < selfData.projects.length; i++) {
 
 const navBar = document.querySelector(".nav-bar");
 const nodeNHome = document.createElement("a");
-nodeNHome.setAttribute("href", "/portfolio");
+nodeNHome.setAttribute("href", "/");
 nodeNHome.textContent = "Home";
 navBar.appendChild(nodeNHome);
 disappearAfterScroll(navBar);

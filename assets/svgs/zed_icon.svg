@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="zed-title zed-desc">
+  <title id="zed-title">Zed code editor</title>
+  <desc id="zed-desc">A code editor window containing a geometric letter Z</desc>
+  <g fill="none" stroke="#3B78A0" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+    <rect x="28" y="38" width="200" height="180" rx="14"/>
+    <path d="M28 76h200" opacity=".55"/>
+    <circle cx="52" cy="57" r="5" fill="#3B78A0" stroke="none"/>
+    <circle cx="70" cy="57" r="5" fill="#D95D4F" stroke="none"/>
+    <path d="M78 108h100l-100 64h100" stroke="#182A36" stroke-width="12"/>
+    <path d="M57 107 43 122l14 15m142-30 14 15-14 15" opacity=".65"/>
+    <path d="M160 189h32"/>
+  </g>
+</svg>

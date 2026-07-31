@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="supabase-title">
+  <title id="supabase-title">Supabase</title>
+  <rect x="4" y="4" width="120" height="120" rx="12" fill="none" stroke="#3B78A0" stroke-width="5"/>
+  <path d="M4 34h120" stroke="#3B78A0" stroke-width="4" opacity=".55"/>
+  <circle cx="18" cy="19" r="4" fill="#D95D4F"/>
+  <circle cx="31" cy="19" r="4" fill="#3B78A0"/>
+  <g transform="translate(15 16) scale(.76)">
+    <path fill="#182A36" d="M102.24 186.21c-3.267 4.117-9.904 1.862-9.977-3.397l-1.156-76.906h51.715c9.365 0 14.587 10.817 8.763 18.149l-49.345 62.154Z" transform="translate(-27.722 -60.338)"/>
+    <path fill="#D95D4F" d="M53.484 2.128c3.267-4.117 9.905-1.862 9.977 3.396l.508 76.907H12.902c-9.365 0-14.587-10.817-8.764-18.149L53.484 2.128Z"/>
+  </g>
+</svg>

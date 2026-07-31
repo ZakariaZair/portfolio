@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="csharp-title">
+  <title id="csharp-title">C Sharp</title>
+  <path d="m128 25 89 51v104l-89 51-89-51V76l89-51Z" fill="none" stroke="#3B78A0" stroke-linejoin="round" stroke-width="9"/>
+  <path d="M141 93c-11-11-31-13-46-5-17 9-26 31-20 51 6 22 28 35 49 30 7-2 13-5 18-10" fill="none" stroke="#182A36" stroke-linecap="round" stroke-width="12"/>
+  <g stroke="#D95D4F" stroke-linecap="round" stroke-width="7">
+    <path d="M166 105v57m31-57v57m-47-38h65m-65 20h65"/>
+  </g>
+</svg>

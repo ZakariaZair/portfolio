@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="tactics-title tactics-desc">
+  <title id="tactics-title">Online tactical board</title>
+  <desc id="tactics-desc">A top-down playing field with player positions and a movement route</desc>
+  <g fill="none" stroke="#3B78A0" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+    <rect x="26" y="38" width="204" height="180" rx="12"/>
+    <path d="M128 38v180" opacity=".55"/>
+    <circle cx="128" cy="128" r="28" opacity=".55"/>
+    <path d="M26 91h25c16 0 29 13 29 29v16c0 16-13 29-29 29H26m204-74h-25c-16 0-29 13-29 29v16c0 16 13 29 29 29h25" opacity=".55"/>
+    <circle cx="65" cy="177" r="10" fill="#3B78A0"/>
+    <circle cx="112" cy="145" r="10" fill="#D95D4F"/>
+    <circle cx="180" cy="82" r="10" fill="#3B78A0"/>
+    <path d="M74 171c27-10 27-21 38-26 18-8 38 1 55-12 13-10 13-28 13-40"/>
+    <path d="m166 97 14-15 14 15"/>
+  </g>
+</svg>

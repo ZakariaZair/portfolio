@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="partnapp-title partnapp-desc">
+  <title id="partnapp-title">PartNApp</title>
+  <desc id="partnapp-desc">Two professional profiles connected as project partners</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+    <rect x="26" y="39" width="91" height="162" rx="13" stroke="#3B78A0"/>
+    <rect x="139" y="39" width="91" height="162" rx="13" stroke="#182A36"/>
+    <circle cx="72" cy="86" r="19" stroke="#3B78A0"/>
+    <circle cx="184" cy="86" r="19" stroke="#182A36"/>
+    <path d="M46 157c3-27 15-42 26-42s23 15 26 42" stroke="#3B78A0"/>
+    <path d="M158 157c3-27 15-42 26-42s23 15 26 42" stroke="#182A36"/>
+    <path d="M117 121h22" stroke="#D95D4F"/>
+    <circle cx="128" cy="121" r="8" fill="#D95D4F" stroke="none"/>
+    <path d="M85 218h86" stroke="#182A36"/>
+  </g>
+</svg>
