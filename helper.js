@@ -65,7 +65,8 @@ export function listenForPopup(buttonNode, infos) {
     bodyNode.style.overflow = "hidden";
     const popupNode = document.querySelector(".popup-holder");
     popupNode.style.display = "flex";
-    popupNode.style.top = window.scrollY + "px";
+    popupNode.style.top = "0";
+    document.querySelector(".popup-close")?.focus();
 
     controller.abort();
     controller = new AbortController();
@@ -79,36 +80,38 @@ function setAllSlider(infos) {
   const sliderContentImgNode = document.querySelector(".content-holder img");
   const slideButtonLeftNode = document.querySelector(".slider-left");
   const slideButtonRightNode = document.querySelector(".slider-right");
-  function outOfBounds() {
-    sliderContentImgNode.src = "./assets/gifs/loading_gif.gif";
-    slideButtonLeftNode.style.opacity = 1;
-    slideButtonRightNode.style.opacity = 1;
-    if (sliderIndex <= 0) slideButtonLeftNode.style.opacity = 0.2;
-    if (
-      !infos.slide_show_links ||
-      sliderIndex >= infos.slide_show_links.length - 1
-    )
-      slideButtonRightNode.style.opacity = 0.2;
+  const slides = infos.slide_show_links ?? [];
+
+  function renderSlide() {
+    slideButtonLeftNode.disabled = sliderIndex <= 0;
+    slideButtonRightNode.disabled = sliderIndex >= slides.length - 1;
+
+    if (!slides.length) {
+      sliderContentImgNode.removeAttribute("src");
+      sliderContentImgNode.alt = `No preview available for ${infos.name}`;
+      return;
+    }
+
+    sliderContentImgNode.src = slides[sliderIndex];
+    sliderContentImgNode.alt = `${infos.name} preview ${sliderIndex + 1} of ${slides.length}`;
   }
-  outOfBounds();
-  sliderContentImgNode.src = infos.slide_show_links[sliderIndex];
+
+  renderSlide();
   slideButtonLeftNode.addEventListener(
     "click",
     () => {
       if (sliderIndex <= 0) return;
       sliderIndex -= 1;
-      outOfBounds();
-      sliderContentImgNode.src = infos.slide_show_links[sliderIndex];
+      renderSlide();
     },
     { signal },
   );
   slideButtonRightNode.addEventListener(
     "click",
     () => {
-      if (sliderIndex >= infos.slide_show_links.length - 1) return;
+      if (sliderIndex >= slides.length - 1) return;
       sliderIndex += 1;
-      outOfBounds();
-      sliderContentImgNode.src = infos.slide_show_links[sliderIndex];
+      renderSlide();
     },
     { signal },
   );
@@ -116,13 +119,24 @@ function setAllSlider(infos) {
 
 export function closePopup(closeInfo) {
   const popupNode = document.querySelector(closeInfo);
-  popupNode.addEventListener("click", (event) => {
-    if (event.target !== event.currentTarget) return;
+  const dismissPopup = () => {
     const bodyNode = document.querySelector("body");
     const imgNode = document.querySelector(".content-holder img");
-    imgNode.src = "./assets/gifs/loading_gif.gif";
-    bodyNode.style.overflow = "scroll";
+    if (imgNode) imgNode.src = "./assets/gifs/loading_gif.gif";
+    bodyNode.style.overflow = "";
     popupNode.style.display = "none";
+  };
+
+  popupNode.addEventListener("click", (event) => {
+    const clickedBackdrop = event.target === event.currentTarget;
+    const clickedCloseButton = event.target.closest?.(".popup-close");
+    if (clickedBackdrop || clickedCloseButton) dismissPopup();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && popupNode.style.display === "flex") {
+      dismissPopup();
+    }
   });
 }
 

@@ -31,7 +31,9 @@
       ],
       "full_desc": "Unforget is a client-only mobile application for preserving advice, realizations, and messages to a future self. Built with Expo SDK 57, React Native, TypeScript, and Expo Router, it lets users capture a thought and schedule it to return at an exact time, on a repeating rhythm, or occasionally. The complete advice appears in a local notification and can be scheduled again when needed. Advice and notification metadata are persisted with AsyncStorage and remain on the device, keeping the experience private without requiring a backend service.",
       "slide_show_links": [
-        "./assets/pngs/unforget-logo.png"
+        "./assets/pngs/unforget-remember.jpg",
+        "./assets/pngs/unforget-archive.jpg",
+        "./assets/pngs/unforget-settings.png"
       ]
     },
     {

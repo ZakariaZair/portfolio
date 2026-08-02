@@ -1,18 +1,19 @@
-<div class="pop-background">
+<div class="pop-background" role="dialog" aria-modal="true" aria-labelledby="popup-project-name">
+    <button class="popup-close" type="button" aria-label="Close project details">&times;</button>
     <div class="project-name">
-        <span></span>
+        <span id="popup-project-name"></span>
     </div>
     <div class="project-slider-full-desc-holder">
         <div class="slider-holder">
-            <div class="slider-left">
-                <img src="./assets/slider_left.png" />
-            </div>
+            <button class="slider-left" type="button" aria-label="Previous project image">
+                <img src="./assets/slider_left.png" alt="" />
+            </button>
             <div class="content-holder">
-                <img />
+                <img alt="" />
             </div>
-            <div class="slider-right">
-                <img src="./assets/slider_right.png" />
-            </div>
+            <button class="slider-right" type="button" aria-label="Next project image">
+                <img src="./assets/slider_right.png" alt="" />
+            </button>
         </div>
         <div class="project-full-description">
             <span></span>

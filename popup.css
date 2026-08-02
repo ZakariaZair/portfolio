@@ -1,165 +1,258 @@
 .pop-background {
-    width: 70%;
-    height: 85%;
-    border-radius: 20px;
-    background-color: white;
-    border: 3px solid whitesmoke;
-    border-radius: 25px;
-    box-shadow: 0px 0px 6px midnightblue;
+    position: relative;
+    box-sizing: border-box;
+    width: min(1180px, 100%);
+    height: min(780px, calc(100dvh - 40px));
+    min-height: min(540px, calc(100dvh - 40px));
+    padding: 0 clamp(18px, 2.5vw, 34px) clamp(18px, 2.5vw, 34px);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    border: 2px solid rgba(59, 120, 160, 0.35);
+    border-radius: 24px;
+    background-color: #ffffff;
+    box-shadow: 0 24px 70px rgba(24, 42, 54, 0.35);
+}
+
+.popup-close {
+    position: absolute;
+    z-index: 2;
+    top: 18px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid rgba(24, 42, 54, 0.18);
+    border-radius: 50%;
+    background: #f0f5f9;
+    color: #182a36;
+    font: 400 27px/1 "Space Grotesk", system-ui, sans-serif;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.popup-close:hover {
+    color: #ffffff;
+    border-color: #d95d4f;
+    background: #d95d4f;
+    transform: rotate(5deg) scale(1.05);
+}
+
+.popup-close:focus-visible,
+.slider-left:focus-visible,
+.slider-right:focus-visible {
+    outline: 3px solid rgba(59, 120, 160, 0.45);
+    outline-offset: 3px;
 }
 
 .project-name {
-    height: 15%;
+    min-height: 82px;
+    padding: 0 58px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid rgba(24, 42, 54, 0.12);
     font-family: "Quantico", sans-serif;
-    & span {
-        font-size: 40px;
-        width: 100%;
-        text-align: center;
-    }
 }
+
+.project-name span {
+    width: 100%;
+    font-size: clamp(25px, 3vw, 38px);
+    line-height: 1.15;
+    text-align: center;
+}
+
 .project-slider-full-desc-holder {
-    height: 70%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    min-width: 0;
+    min-height: 0;
+    padding-top: clamp(18px, 2.5vw, 30px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.75fr) minmax(300px, 1fr);
+    gap: clamp(18px, 2.5vw, 30px);
 }
+
 .slider-holder {
-    height: 100%;
-    width: 65%;
-    display: flex;
+    min-width: 0;
+    min-height: 0;
+    padding: clamp(10px, 1.5vw, 18px);
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
     align-items: center;
-    justify-content: space-evenly;
-}
-.project-full-description {
-    height: 60%;
-    width: 35%;
-    padding: 2% 2%;
-    border-left: 2px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    & span {
-        text-align: center;
-        font-size: 14px;
-        width: 100%;
-        height: 100%;
-    }
+    gap: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(59, 120, 160, 0.22);
+    border-radius: 18px;
+    background: #f0f5f9;
 }
 
-.slider-left {
-    width: 50px;
-    & img {
-        width: 50px;
-        height: 50px;
-        transition: 0.05s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    }
-    & img:hover {
-        transform: scale(1.2);
-    }
-}
 .content-holder {
-    width: 70%;
+    min-width: 0;
+    min-height: 0;
+    width: 100%;
     height: 100%;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    & img {
-        height: 400px;
-        min-width: 250px;
-        border-radius: 3px;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
-    }
+    overflow: hidden;
 }
+
+.content-holder img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(24, 42, 54, 0.22);
+}
+
+.slider-left,
 .slider-right {
-    width: 50px;
-    & img {
-        width: 50px;
-        height: 50px;
-        transition: 0.05s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    width: 44px;
+    height: 44px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(24, 42, 54, 0.14);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.88);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.slider-left img,
+.slider-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.slider-left:hover:not(:disabled),
+.slider-right:hover:not(:disabled) {
+    border-color: #3b78a0;
+    transform: scale(1.08);
+}
+
+.slider-left:disabled,
+.slider-right:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+.project-full-description {
+    min-width: 0;
+    min-height: 0;
+    padding: clamp(22px, 3vw, 38px);
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 5px solid #d95d4f;
+    border-radius: 16px;
+    background: #f7f9fb;
+}
+
+.project-full-description span {
+    width: 100%;
+    max-width: 38ch;
+    font-size: clamp(14px, 1.25vw, 17px);
+    line-height: 1.65;
+    text-align: left;
+}
+
+@media screen and (max-width: 850px) {
+    .pop-background {
+        width: 100%;
+        height: min(900px, calc(100dvh - 24px));
+        min-height: 0;
+        padding: 0 16px 16px;
+        border-radius: 18px;
     }
-    & img:hover {
-        transform: scale(1.2);
+
+    .popup-close {
+        top: 12px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+
+    .project-name {
+        min-height: 62px;
+        padding: 0 46px;
+    }
+
+    .project-name span {
+        font-size: clamp(21px, 5vw, 29px);
+    }
+
+    .project-slider-full-desc-holder {
+        padding-top: 14px;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, 58%) minmax(0, 42%);
+        gap: 14px;
+    }
+
+    .slider-holder {
+        padding: 9px;
+        grid-template-columns: 38px minmax(0, 1fr) 38px;
+        gap: 6px;
+        border-radius: 14px;
+    }
+
+    .slider-left,
+    .slider-right {
+        width: 38px;
+        height: 38px;
+        padding: 6px;
+    }
+
+    .project-full-description {
+        padding: 18px clamp(18px, 5vw, 34px);
+        align-items: flex-start;
+        border-top: 4px solid #d95d4f;
+        border-left: 0;
+        border-radius: 14px;
+    }
+
+    .project-full-description span {
+        max-width: 60ch;
+        margin: auto;
+        font-size: clamp(13px, 3vw, 15px);
+        line-height: 1.55;
     }
 }
 
-/*   */
-/* M */
-/* E */
-/* D */
-/* I */
-/* A */
-/*   */
-/* S */
-/* C */
-/* R */
-/* E */
-/* E */
-/* N */
-/*   */
-
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 480px) {
     .pop-background {
-        width: 95%;
-        height: 80%;
-        border-radius: 10px;
-        background-color: white;
+        height: 100dvh;
+        padding: 0 10px 10px;
+        border: 0;
+        border-radius: 0;
     }
-    .project-name {
-        height: 5%;
-        & span {
-            font-size: 20px;
-        }
-    }
-    .slider-holder {
-        height: 45%;
-        width: 100%;
-        padding: 5% 0%;
 
-        & .slider-left {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            & img {
-                width: 20px;
-                height: 20px;
-            }
-        }
-
-        & .slider-right {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            & img {
-                width: 20px;
-                height: 20px;
-            }
-        }
-    }
     .project-slider-full-desc-holder {
-        height: 95%;
-        flex-direction: column;
+        grid-template-rows: minmax(0, 52%) minmax(0, 48%);
+        gap: 10px;
+        padding-top: 10px;
     }
+
+    .slider-holder {
+        grid-template-columns: 32px minmax(0, 1fr) 32px;
+        padding: 6px;
+    }
+
+    .slider-left,
+    .slider-right {
+        width: 32px;
+        height: 32px;
+        padding: 5px;
+    }
+
     .project-full-description {
-        width: 90%;
-        height: 55%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-left: none;
-        border-top: 2px solid black;
-        & span {
-            font-size: 11px;
-        }
-    }
-    .content-holder {
-        & img {
-            height: 170px;
-            min-height: 90px;
-            min-width: 70px;
-        }
+        padding: 15px 16px;
     }
 }
