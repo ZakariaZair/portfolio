@@ -18,6 +18,23 @@
   ],
   "projects": [
     {
+      "name": "Unforget",
+      "tiny_desc": "Private advice-resurfacing mobile app built with Expo, React Native, TypeScript, and Expo Router. Users save meaningful thoughts and bring them back through exact, repeating, or occasional local notifications, with all personal data kept on-device.",
+      "icon_link": "./assets/svgs/unforget_icon.svg",
+      "repo_link": "https://github.com/ZakariaZair/unforget",
+      "version_control_icon": "./assets/svgs/github-original.svg",
+      "logos_links": [
+        "./assets/svgs/git-original.svg",
+        "./assets/svgs/expo_icon.svg",
+        "./assets/svgs/react-original.svg",
+        "./assets/svgs/typescript-original.svg"
+      ],
+      "full_desc": "Unforget is a client-only mobile application for preserving advice, realizations, and messages to a future self. Built with Expo SDK 57, React Native, TypeScript, and Expo Router, it lets users capture a thought and schedule it to return at an exact time, on a repeating rhythm, or occasionally. The complete advice appears in a local notification and can be scheduled again when needed. Advice and notification metadata are persisted with AsyncStorage and remain on the device, keeping the experience private without requiring a backend service.",
+      "slide_show_links": [
+        "./assets/pngs/unforget-logo.png"
+      ]
+    },
+    {
       "name": "PartNApp",
       "tiny_desc": "Multi-platform partnership marketplace spanning Expo and React Native mobile, React and Vite web, an ASP.NET Core .NET 10 API, and Supabase/PostgreSQL. Users publish project offers, discover collaborators, and express interest through shared product workflows.",
       "icon_link": "./assets/svgs/partnapp_icon.svg",

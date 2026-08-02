@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="unforget-title unforget-desc">
+  <title id="unforget-title">Unforget</title>
+  <desc id="unforget-desc">A thought saved inside a mobile application</desc>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="38" y="20" width="180" height="216" rx="24" stroke="#3B78A0" stroke-width="9"/>
+    <path d="M103 39h50" stroke="#D95D4F" stroke-width="8"/>
+    <path d="M91 79c10-23 39-29 61-17l35 31c18 15 22 39 11 58-7 13-20 21-36 22-12 19-39 24-57 8-22 9-46-3-52-25-4-15 0-30 11-41-13-20-3-42 17-45 4-1 8 2 10 9Z" stroke="#182A36" stroke-width="9"/>
+    <path d="M152 62c5 13 2 27 9 34 7 8 17 2 26-3" stroke="#D95D4F" stroke-width="8"/>
+    <circle cx="88" cy="198" r="11" stroke="#182A36" stroke-width="8"/>
+    <circle cx="67" cy="218" r="6" fill="#3B78A0" stroke="none"/>
+  </g>
+</svg>
