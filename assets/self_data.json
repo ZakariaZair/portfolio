@@ -6,6 +6,28 @@
     "Hands-on experience delivering full-stack and cross-platform projects, from data analysis platforms to real-time web and mobile applications.",
     "Clear communicator in English and French, with an interest in scalable systems, thoughtful engineering, and practical product design."
   ],
+  "translations": {
+    "fr": {
+      "description": "Diplômé en génie logiciel de Polytechnique Montréal, spécialisé dans la conception d’applications fiables et centrées sur l’utilisateur pour le Web, le mobile et les systèmes axés sur les données.",
+      "profile": [
+        "Concentration en intelligence artificielle et science des données, avec de solides bases en conception et en développement logiciel.",
+        "Expérience pratique de livraison de projets full-stack et multiplateformes, des plateformes d’analyse de données aux applications Web et mobiles en temps réel.",
+        "Communication claire en français et en anglais, avec un intérêt pour les systèmes évolutifs, l’ingénierie réfléchie et la conception de produits utiles."
+      ],
+      "ui": {
+        "home": "Accueil",
+        "viewProject": "Voir le projet",
+        "footer": "*Ce portfolio a été conçu pour permettre aux recruteurs de mieux comprendre mon profil.*",
+        "switchToFrench": "Passer au français",
+        "switchToEnglish": "Switch to English",
+        "closeProject": "Fermer les détails du projet",
+        "previousSlide": "Image précédente",
+        "nextSlide": "Image suivante",
+        "noPreview": "Aperçu non disponible pour",
+        "preview": "Aperçu"
+      }
+    }
+  },
   "self_links": [
     {
       "net_link": "https://www.linkedin.com/in/zakaria-zair-2793ba23a",
@@ -20,6 +42,13 @@
     {
       "name": "Unforget",
       "tiny_desc": "Private advice-resurfacing mobile app built with Expo, React Native, TypeScript, and Expo Router. Users save meaningful thoughts and bring them back through exact, repeating, or occasional local notifications, with all personal data kept on-device.",
+      "translations": {
+        "fr": {
+          "name": "Unforget",
+          "tiny_desc": "Application mobile privée de rappels de conseils, développée avec Expo, React Native, TypeScript et Expo Router. Les utilisateurs enregistrent des pensées importantes et les reçoivent à nouveau au moyen de notifications locales ponctuelles, récurrentes ou occasionnelles; toutes les données restent sur l’appareil.",
+          "full_desc": "Unforget est une application mobile sans serveur conçue pour préserver des conseils, des réflexions et des messages destinés à son futur soi. Développée avec Expo SDK 57, React Native, TypeScript et Expo Router, elle permet de saisir une pensée et de planifier son retour à une heure précise, selon une fréquence récurrente ou de façon occasionnelle. Le conseil complet apparaît dans une notification locale et peut être reprogrammé au besoin. Les conseils et leurs paramètres de notification sont enregistrés avec AsyncStorage et demeurent sur l’appareil, ce qui préserve la confidentialité sans nécessiter de service backend."
+        }
+      },
       "icon_link": "./assets/svgs/unforget_icon.svg",
       "repo_link": "https://github.com/ZakariaZair/unforget",
       "version_control_icon": "./assets/svgs/github-original.svg",
@@ -39,6 +68,13 @@
     {
       "name": "PartNApp",
       "tiny_desc": "Multi-platform partnership marketplace spanning Expo and React Native mobile, React and Vite web, an ASP.NET Core .NET 10 API, and Supabase/PostgreSQL. Users publish project offers, discover collaborators, and express interest through shared product workflows.",
+      "translations": {
+        "fr": {
+          "name": "PartNApp",
+          "tiny_desc": "Place de marché de partenariats multiplateforme réunissant une application mobile Expo et React Native, une application Web React et Vite, une API ASP.NET Core .NET 10 et Supabase/PostgreSQL. Les utilisateurs publient des offres de projet, trouvent des collaborateurs et manifestent leur intérêt à travers des parcours partagés.",
+          "full_desc": "PartNApp est une place de marché multiplateforme qui met en relation des porteurs de projets et des partenaires fiables aux compétences complémentaires. Le monorepo sépare une application mobile Expo et React Native pour iOS et Android, un client Web indépendant en React et Vite, une API minimale ASP.NET Core ciblant .NET 10, ainsi que des migrations Supabase/PostgreSQL. L’API expose des parcours typés pour les profils, les offres de partenariat et les manifestations d’intérêt. La base de données définit les profils, les offres et les intérêts, avec des politiques de sécurité au niveau des lignes préparées autour de Supabase Auth. Cette séparation permet à chaque client d’évoluer à son propre rythme tout en maintenant des contrats produit et des responsabilités de données explicites."
+        }
+      },
       "icon_link": "./assets/svgs/partnapp_icon.svg",
       "repo_link": "https://github.com/ZakariaZair/partnapp",
       "version_control_icon": "./assets/svgs/github-original.svg",
@@ -62,6 +98,13 @@
     {
       "name": "Pixel Rune",
       "tiny_desc": "Cross-platform mobile personalization app built with Expo, React Native, and TypeScript. Users can select or draw 16×16 pixel-art Runes, persist an active design locally, and prepare it for an iOS WidgetKit home-screen widget.",
+      "translations": {
+        "fr": {
+          "name": "Pixel Rune",
+          "tiny_desc": "Application mobile de personnalisation multiplateforme développée avec Expo, React Native et TypeScript. Les utilisateurs peuvent sélectionner ou dessiner des Runes en pixel art 16×16, conserver le design actif localement et le préparer pour un widget d’écran d’accueil iOS avec WidgetKit.",
+          "full_desc": "Pixel Rune est une application mobile de personnalisation multiplateforme développée avec Expo SDK 57, React Native et TypeScript. Elle permet de parcourir des Runes intégrées, de sélectionner et de conserver localement un design actif, puis de créer du pixel art 16×16 à l’aide d’un éditeur intégré. Le modèle de Rune est sérialisable afin qu’un même design puisse être partagé avec une extension native iOS WidgetKit. Un plugin de configuration Expo local génère la cible SwiftUI du widget et le pont App Group lors du prébuild ou des builds EAS, ce qui rend l’intégration native reproductible sans versionner la sortie iOS générée. Le dépôt prépare également des intégrations Supabase, Sentry, PostHog et RevenueCat pour de futures fonctionnalités produit."
+        }
+      },
       "icon_link": "./assets/svgs/pixel-rune-icon.svg",
       "repo_link": "https://github.com/ZakariaZair/pixel_rune",
       "version_control_icon": "./assets/svgs/github-original.svg",
@@ -82,6 +125,13 @@
     {
       "name": "ApexTransit",
       "tiny_desc": "Built a data analysis platform to evaluate transit prediction accuracy using real-time data, enabling better decision-making for transit agencies. Processed large-scale real-time data efficiently using optimized pipelines with Polars.",
+      "translations": {
+        "fr": {
+          "name": "ApexTransit",
+          "tiny_desc": "Plateforme d’analyse de données conçue pour évaluer la précision des prédictions de transport en commun à partir de données en temps réel et soutenir la prise de décision des agences. Traitement efficace de grands volumes de données grâce à des pipelines optimisés avec Polars.",
+          "full_desc": "Ce projet est une plateforme d’analyse de données reposant sur une architecture en couches évolutive qui sépare la présentation, la logique d’affaires et l’accès aux données afin de réduire le couplage et de favoriser l’extensibilité. L’interface a été développée avec React, Next.js et Tailwind CSS pour offrir une expérience moderne et réactive, tandis que le backend s’appuie sur un service FastAPI connecté à une base de données. Le système est conteneurisé avec Docker pour assurer des déploiements cohérents et reproductibles, et utilise Polars pour le traitement performant de grands ensembles de données. Des patrons d’architecture et conventions de code clairs ont été adoptés afin de maintenir la cohérence du projet et d’intégrer de nouvelles fonctionnalités sans perturber les composantes existantes."
+        }
+      },
       "icon_link": "./assets/svgs/apex_icon.svg",
       "repo_link": "https://github.com/TransitApp/ETA-Accuracy-Benchmark",
       "version_control_icon": "./assets/svgs/github-original.svg",
@@ -106,6 +156,13 @@
     {
       "name": "7 Difference Online Application",
       "tiny_desc": "Online multiplayer web application where players identify differences between two images in real time. Designed and implemented using the MANN stack (MongoDB, Angular, Node.js, NestJS), with a focus on responsive gameplay and scalable backend interactions.",
+      "translations": {
+        "fr": {
+          "name": "Application des 7 différences",
+          "tiny_desc": "Application Web multijoueur où les joueurs trouvent les différences entre deux images en temps réel. Conçue et développée avec la pile MANN (MongoDB, Angular, Node.js, NestJS), avec une attention particulière à la réactivité du jeu et à l’évolutivité du backend.",
+          "full_desc": "L’application front-end est développée en TypeScript avec Angular. Le backend fonctionne avec Node.js et NestJS et accède aux données à travers une base MongoDB. Une version mobile a également été développée avec Flutter. L’interface réseau utilise les protocoles HTTP et WebSockets. Le projet a été réalisé sur deux années universitaires dans un contexte Agile, incluant Scrum, prototypes et livraisons finales. Jasmine et Jest ont été utilisés pour les tests unitaires, Postman pour les tests réseau et GitLab pour le contrôle de version. Il s’agit d’un jeu multijoueur en ligne dont les fonctionnalités fonctionnent en temps réel : gestion des salles, liste d’amis, personnalisation de l’interface, inscription et connexion, messagerie, plusieurs modes de jeu, reprise de partie et partage avec des amis."
+        }
+      },
       "icon_link": "./assets/svgs/diff_icon.svg",
       "repo_link": "https://github.com/ZakariaZair/PolyDiff",
       "version_control_icon": "./assets/svgs/github-original.svg",
@@ -133,6 +190,13 @@
     {
       "name": "QT Chess Game",
       "tiny_desc": "Cross-platform chess application developed in C++ using Qt, supporting Windows, Linux, and macOS. Refactored from an existing codebase to improve structure, maintainability, and build automation using Makefile and clang++.",
+      "translations": {
+        "fr": {
+          "name": "Jeu d’échecs Qt",
+          "tiny_desc": "Application d’échecs multiplateforme développée en C++ avec Qt, compatible avec Windows, Linux et macOS. Refactorisation d’une base de code existante afin d’améliorer sa structure, sa maintenabilité et l’automatisation de sa compilation avec Makefile et clang++.",
+          "full_desc": "Ce projet est la refactorisation d’un ancien projet scolaire d’échecs. J’ai choisi de réimplémenter les fonctionnalités d’origine en révisant chaque partie du code et en améliorant les éléments qui le nécessitaient. Le travail effectué est documenté dans le journal du README. L’environnement initial était fourni, mais plusieurs aspects devaient être modernisés. J’ai notamment adapté la configuration pour compiler avec clang++ sur Windows, Linux et macOS à l’aide de qmake, retiré le code inutilisé et dupliqué, amélioré les performances en ramenant les algorithmes à une complexité O(n), renommé et restructuré les classes pour améliorer la lisibilité, la maintenabilité et la modularité, puis ajouté des fonctionnalités de débogage du plateau et de mise à l’échelle des pièces."
+        }
+      },
       "icon_link": "./assets/svgs/chess_icon.svg",
       "repo_link": "https://github.com/ZakariaZair/qt_board_game",
       "version_control_icon": "./assets/svgs/github-original.svg",
@@ -151,6 +215,13 @@
     {
       "name": "Online Tactical Board",
       "tiny_desc": "Full-stack web application built with Angular and NestJS, enabling users to create and interact with tactical plays for Rocket League. Designed to support real-time interactions and an intuitive user experience for strategy visualization.",
+      "translations": {
+        "fr": {
+          "name": "Tableau tactique en ligne",
+          "tiny_desc": "Application Web full-stack développée avec Angular et NestJS, permettant de créer et de manipuler des tactiques pour Rocket League. Conçue pour prendre en charge des interactions en temps réel et une expérience intuitive de visualisation de stratégies.",
+          "full_desc": "Ce projet est constitué de deux applications autonomes qui ont été progressivement transformées pour fonctionner ensemble. Il a commencé comme une application Web visant à créer un tableau tactique pour Rocket League, adapté aux différents modes de jeu. Il comportait des fonctionnalités comme le dessin sur le terrain, l’effacement, l’alignement des positions des joueurs et du ballon, la visualisation de la perspective d’un joueur à un moment donné et la création de vidéos à partager. La seconde application a ensuite appliqué ces principes directement dans l’interface du jeu au moyen du SDK Bakkesmod, maintenant déprécié. Les deux projets ont finalement été réunis afin de visualiser en temps réel, en 2D, le contenu de la partie."
+        }
+      },
       "icon_link": "./assets/svgs/soccer_icon.svg",
       "repo_link": "https://github.com/ZakariaZair/rl_bird_view",
       "version_control_icon": "./assets/svgs/github-original.svg",
@@ -175,6 +246,13 @@
     {
       "name": "Unity Game",
       "tiny_desc": "2D puzzle platformer game developed in Unity using C#. Designed core gameplay mechanics and implemented game logic, focusing on smooth player experience and level interaction.",
+      "translations": {
+        "fr": {
+          "name": "Jeu Unity",
+          "tiny_desc": "Jeu de plateforme et de réflexion en 2D développé avec Unity et C#. Conception des mécaniques de jeu principales et de la logique applicative, avec une attention portée à la fluidité de l’expérience joueur et aux interactions avec les niveaux.",
+          "full_desc": "Jeu de plateforme et de réflexion en 2D développé avec Unity et C#. Le projet porte sur la conception des mécaniques principales, l’implémentation de la logique de jeu et la création d’interactions de niveau fluides et cohérentes pour le joueur."
+        }
+      },
       "icon_link": "./assets/svgs/unity-original.svg",
       "repo_link": "https://github.com/ZakariaZair/unity_game",
       "version_control_icon": "./assets/svgs/github-original.svg",

@@ -9,11 +9,12 @@ export function hotReload(timing) {
   }, timing);
 }
 
-export function loadHtmlFile(doc, classname) {
+export function loadHtmlFile(doc, classname, onLoaded) {
   fetch(doc)
     .then((response) => response.text())
     .then((data) => {
       document.querySelector(classname).innerHTML = data;
+      onLoaded?.();
     });
 }
 
@@ -54,7 +55,7 @@ function hoverToShow(node) {
   node.style.transform = "translate(0, -20px)";
 }
 
-export function listenForPopup(buttonNode, infos) {
+export function listenForPopup(buttonNode, infos, labels) {
   buttonNode.addEventListener("click", () => {
     const titleNode = document.querySelector(".project-name span");
     titleNode.textContent = infos.name;
@@ -66,16 +67,19 @@ export function listenForPopup(buttonNode, infos) {
     const popupNode = document.querySelector(".popup-holder");
     popupNode.style.display = "flex";
     popupNode.style.top = "0";
+    document.querySelector(".popup-close")?.setAttribute("aria-label", labels.closeProject);
+    document.querySelector(".slider-left")?.setAttribute("aria-label", labels.previousSlide);
+    document.querySelector(".slider-right")?.setAttribute("aria-label", labels.nextSlide);
     document.querySelector(".popup-close")?.focus();
 
     controller.abort();
     controller = new AbortController();
     signal = controller.signal;
-    setAllSlider(infos);
+    setAllSlider(infos, labels);
   });
 }
 
-function setAllSlider(infos) {
+function setAllSlider(infos, labels) {
   sliderIndex = 0;
   const sliderContentImgNode = document.querySelector(".content-holder img");
   const slideButtonLeftNode = document.querySelector(".slider-left");
@@ -88,12 +92,12 @@ function setAllSlider(infos) {
 
     if (!slides.length) {
       sliderContentImgNode.removeAttribute("src");
-      sliderContentImgNode.alt = `No preview available for ${infos.name}`;
+      sliderContentImgNode.alt = `${labels.noPreview} ${infos.name}`;
       return;
     }
 
     sliderContentImgNode.src = slides[sliderIndex];
-    sliderContentImgNode.alt = `${infos.name} preview ${sliderIndex + 1} of ${slides.length}`;
+    sliderContentImgNode.alt = `${labels.preview} ${infos.name} ${sliderIndex + 1} / ${slides.length}`;
   }
 
   renderSlide();
@@ -140,9 +144,9 @@ export function closePopup(closeInfo) {
   });
 }
 
-export function setButtonCue(buttonNode) {
+export function setButtonCue(buttonNode, label) {
   const cueNode = document.createElement("span");
-  cueNode.textContent = "View Project";
+  cueNode.textContent = label;
   buttonNode.appendChild(cueNode);
   const removeCue = () => {
     cueNode.style.opacity = 0;

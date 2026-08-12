@@ -1,8 +1,6 @@
 import {
   closePopup,
   loadHtmlFile,
-  timeWriter,
-  loadAfter,
   listenForPopup,
   initAnimationShow,
   setButtonCue,
@@ -10,108 +8,167 @@ import {
 } from "./helper.js";
 import selfData from "./assets/self_data.json" with { type: "json" };
 
-loadHtmlFile("./popup.html", ".popup-holder");
-closePopup(".popup-holder");
+const englishUi = {
+  home: "Home",
+  viewProject: "View Project",
+  footer: "*This portfolio was made for recruiters to better understand my profile*",
+  switchToFrench: "Passer au français",
+  switchToEnglish: "Switch to English",
+  closeProject: "Close project details",
+  previousSlide: "Previous project image",
+  nextSlide: "Next project image",
+  noPreview: "No preview available for",
+  preview: "Preview",
+};
 
-const myName = selfData.name;
-const nodeName = document.querySelector(".self-name").querySelector("h1");
-loadAfter(() => timeWriter(nodeName, myName, 100), 200);
+let language = localStorage.getItem("portfolio-language") === "fr" ? "fr" : "en";
 
-const myDesc = selfData.description;
-const nodeDesc = document.querySelector(".self-description").querySelector("p");
-loadAfter(() => timeWriter(nodeDesc, myDesc, 25), 2600);
+loadHtmlFile("./popup.html", ".popup-holder", () => {
+  closePopup(".popup-holder");
+});
 
-loadAfter(() => {
-  const nodeLinks = document.querySelector(".self-links");
-  for (let link of selfData.self_links) {
-    let nodeHref = document.createElement("a");
-    let nodeIcon = document.createElement("img");
-    nodeHref.href = link.net_link;
-    nodeHref.target = "_blank";
-    nodeHref.rel = "nooopener noreferrer";
-    nodeIcon.src = link.icon_link;
-    nodeHref.append(nodeIcon);
-    nodeLinks.appendChild(nodeHref);
-  }
-}, 4600);
+function contentForLanguage() {
+  if (language === "fr") return selfData.translations.fr;
 
-const profileHolder = document.querySelector(".self-profile");
-for (let i = 0; i < selfData.profile.length; i++) {
-  let comment = selfData.profile[i];
-  let nodeComm = document.createElement("p");
-  loadAfter(() => timeWriter(nodeComm, comment, 20), 4600 + i * 2000);
-  if (i < 2) nodeComm.style.fontWeight = 850;
-  profileHolder.appendChild(nodeComm);
+  return {
+    description: selfData.description,
+    profile: selfData.profile,
+    ui: englishUi,
+  };
 }
 
-const projectHolder = document.querySelector(".projects-holder");
-for (let i = 0; i < selfData.projects.length; i++) {
-  let spName = selfData.projects[i].name;
-  let spDesc = selfData.projects[i].tiny_desc;
-  let spIconLnk = selfData.projects[i].icon_link;
-  let spRepoLnk = selfData.projects[i].repo_link;
-  let spGithubIconLnk = selfData.projects[i].version_control_icon;
+function projectForLanguage(project) {
+  if (language !== "fr") return project;
 
-  const nodePButton = document.createElement("div");
-  nodePButton.setAttribute("class", "project-button");
-  listenForPopup(nodePButton, selfData.projects[i]);
-  const nodeIcon = document.createElement("img");
-  nodeIcon.src = spIconLnk;
-  setButtonCue(nodePButton);
-
-  const nodePTitle = document.createElement("div");
-  nodePTitle.setAttribute("class", "project-title");
-  const nodeName = document.createElement("p");
-  nodeName.textContent = spName;
-  const nodeRepoLnk = document.createElement("a")
-  nodeRepoLnk.href = spRepoLnk;
-  nodeRepoLnk.target = "_blank";
-  nodeRepoLnk.rel = "nooopener noreferrer";
-  const nodeGithubIconImg = document.createElement("img")
-  nodeGithubIconImg.src = spGithubIconLnk;
-
-  const nodePDesc = document.createElement("div");
-  nodePDesc.setAttribute("class", "project-description");
-  const nodeDesc = document.createElement("p");
-  nodeDesc.textContent = spDesc;
-
-  const nodePLogos = document.createElement("div");
-  nodePLogos.setAttribute("class", "project-logos");
-  for (let logoLnk of selfData.projects[i].logos_links) {
-    let nodeLogo = document.createElement("img");
-    nodeLogo.src = logoLnk;
-    nodePLogos.appendChild(nodeLogo);
-  }
-
-  const nodePContainer = document.createElement("div");
-  nodePContainer.setAttribute("class", "project-container");
-
-  nodePButton.appendChild(nodeIcon);
-  nodePTitle.appendChild(nodeRepoLnk);
-  nodeRepoLnk.appendChild(nodeGithubIconImg);
-  nodePTitle.appendChild(nodeName);
-  nodePDesc.appendChild(nodePTitle);
-  nodePDesc.appendChild(nodeDesc);
-  nodePContainer.appendChild(nodePButton);
-  nodePContainer.appendChild(nodePDesc);
-  nodePContainer.appendChild(nodePLogos);
-  nodePContainer.style.opacity = 0.05;
-  initAnimationShow(nodePContainer);
-
-  projectHolder.appendChild(nodePContainer);
+  return { ...project, ...project.translations.fr };
 }
 
-const navBar = document.querySelector(".nav-bar");
-const nodeNHome = document.createElement("a");
-nodeNHome.setAttribute("href", "/");
-nodeNHome.textContent = "Home";
-navBar.appendChild(nodeNHome);
-disappearAfterScroll(navBar);
+function renderNavigation(ui) {
+  const navBar = document.querySelector(".nav-bar");
+  navBar.replaceChildren();
 
-const footer = document.querySelector("footer");
-const nodeFAbout = document.createElement("div");
-nodeFAbout.setAttribute("class", "about");
-const nodeFDisclaimer = document.createElement("span");
-nodeFDisclaimer.textContent = "*This portfolio was made for recruiters to better understand my profile*";
-footer.appendChild(nodeFAbout);
-footer.appendChild(nodeFDisclaimer);
+  const homeLink = document.createElement("a");
+  homeLink.className = "nav-home";
+  homeLink.href = "#top";
+  homeLink.textContent = ui.home;
+
+  const languageButton = document.createElement("button");
+  languageButton.className = "nav-language-toggle";
+  languageButton.type = "button";
+  languageButton.textContent = language === "en" ? "FR" : "EN";
+  languageButton.setAttribute("aria-label", language === "en" ? ui.switchToFrench : ui.switchToEnglish);
+  languageButton.setAttribute("title", language === "en" ? ui.switchToFrench : ui.switchToEnglish);
+  languageButton.addEventListener("click", () => {
+    language = language === "en" ? "fr" : "en";
+    localStorage.setItem("portfolio-language", language);
+    renderPortfolio();
+  });
+
+  navBar.append(homeLink, languageButton);
+}
+
+function renderIntroduction(content) {
+  document.querySelector(".self-name h1").textContent = selfData.name;
+  document.querySelector(".self-description p").textContent = content.description;
+
+  const linksHolder = document.querySelector(".self-links");
+  linksHolder.replaceChildren();
+  for (const link of selfData.self_links) {
+    const anchor = document.createElement("a");
+    const icon = document.createElement("img");
+    anchor.href = link.net_link;
+    anchor.target = "_blank";
+    anchor.rel = "noopener noreferrer";
+    icon.src = link.icon_link;
+    icon.alt = "";
+    anchor.append(icon);
+    linksHolder.append(anchor);
+  }
+
+  const profileHolder = document.querySelector(".self-profile");
+  profileHolder.replaceChildren();
+  content.profile.forEach((paragraph, index) => {
+    const profileParagraph = document.createElement("p");
+    profileParagraph.textContent = paragraph;
+    if (index < 2) profileParagraph.style.fontWeight = 850;
+    profileHolder.append(profileParagraph);
+  });
+}
+
+function renderProjects(ui) {
+  const projectHolder = document.querySelector(".projects-holder");
+  projectHolder.replaceChildren();
+
+  for (const project of selfData.projects) {
+    const localizedProject = projectForLanguage(project);
+
+    const projectButton = document.createElement("div");
+    projectButton.className = "project-button";
+    listenForPopup(projectButton, localizedProject, ui);
+
+    const projectIcon = document.createElement("img");
+    projectIcon.src = project.icon_link;
+    projectIcon.alt = "";
+    projectButton.append(projectIcon);
+    setButtonCue(projectButton, ui.viewProject);
+
+    const title = document.createElement("div");
+    title.className = "project-title";
+    const name = document.createElement("p");
+    name.textContent = localizedProject.name;
+    const repositoryLink = document.createElement("a");
+    repositoryLink.href = project.repo_link;
+    repositoryLink.target = "_blank";
+    repositoryLink.rel = "noopener noreferrer";
+    repositoryLink.setAttribute("aria-label", `${localizedProject.name} on GitHub`);
+    const repositoryIcon = document.createElement("img");
+    repositoryIcon.src = project.version_control_icon;
+    repositoryIcon.alt = "";
+    repositoryLink.append(repositoryIcon);
+    title.append(repositoryLink, name);
+
+    const description = document.createElement("div");
+    description.className = "project-description";
+    const descriptionText = document.createElement("p");
+    descriptionText.textContent = localizedProject.tiny_desc;
+    description.append(title, descriptionText);
+
+    const logos = document.createElement("div");
+    logos.className = "project-logos";
+    for (const logoLink of project.logos_links) {
+      const logo = document.createElement("img");
+      logo.src = logoLink;
+      logo.alt = "";
+      logos.append(logo);
+    }
+
+    const container = document.createElement("div");
+    container.className = "project-container";
+    container.style.opacity = 0.05;
+    container.append(projectButton, description, logos);
+    initAnimationShow(container);
+    projectHolder.append(container);
+  }
+}
+
+function renderFooter(ui) {
+  const footer = document.querySelector("footer");
+  footer.replaceChildren();
+  const about = document.createElement("div");
+  about.className = "about";
+  const disclaimer = document.createElement("span");
+  disclaimer.textContent = ui.footer;
+  footer.append(about, disclaimer);
+}
+
+function renderPortfolio() {
+  const content = contentForLanguage();
+  document.documentElement.lang = language;
+  renderNavigation(content.ui);
+  renderIntroduction(content);
+  renderProjects(content.ui);
+  renderFooter(content.ui);
+}
+
+renderPortfolio();
+disappearAfterScroll(document.querySelector(".nav-bar"));

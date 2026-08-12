@@ -309,6 +309,36 @@ nav {
     }
 }
 
+.nav-language-toggle {
+    position: absolute;
+    right: clamp(18px, 6vw, 88px);
+    min-width: 48px;
+    height: 36px;
+    padding: 0 12px;
+    border: 2px solid #3b78a0;
+    border-radius: 18px;
+    background: transparent;
+    color: #182a36;
+    font-family: "Quantico", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.nav-language-toggle:hover {
+    border-color: #d95d4f;
+    background: #d95d4f;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.nav-language-toggle:focus-visible {
+    outline: 3px solid rgba(59, 120, 160, 0.4);
+    outline-offset: 3px;
+}
+
 /*   */
 /* M */
 /* E */
@@ -385,5 +415,8 @@ nav {
             width: 32px;
             height: 32px;
         }
+    }
+    .nav-language-toggle {
+        right: 20px;
     }
 }
