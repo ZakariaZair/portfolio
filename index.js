@@ -1,6 +1,8 @@
 import {
   closePopup,
   loadHtmlFile,
+  timeWriter,
+  loadAfter,
   listenForPopup,
   initAnimationShow,
   setButtonCue,
@@ -67,32 +69,51 @@ function renderNavigation(ui) {
   navBar.append(homeLink, languageButton);
 }
 
-function renderIntroduction(content) {
-  document.querySelector(".self-name h1").textContent = selfData.name;
-  document.querySelector(".self-description p").textContent = content.description;
+function renderIntroduction(content, animate = false) {
+  const nameNode = document.querySelector(".self-name h1");
+  const descriptionNode = document.querySelector(".self-description p");
+  nameNode.textContent = "";
+  descriptionNode.textContent = "";
 
   const linksHolder = document.querySelector(".self-links");
   linksHolder.replaceChildren();
-  for (const link of selfData.self_links) {
-    const anchor = document.createElement("a");
-    const icon = document.createElement("img");
-    anchor.href = link.net_link;
-    anchor.target = "_blank";
-    anchor.rel = "noopener noreferrer";
-    icon.src = link.icon_link;
-    icon.alt = "";
-    anchor.append(icon);
-    linksHolder.append(anchor);
-  }
+  const renderLinks = () => {
+    for (const link of selfData.self_links) {
+      const anchor = document.createElement("a");
+      const icon = document.createElement("img");
+      anchor.href = link.net_link;
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
+      icon.src = link.icon_link;
+      icon.alt = "";
+      anchor.append(icon);
+      linksHolder.append(anchor);
+    }
+  };
 
   const profileHolder = document.querySelector(".self-profile");
   profileHolder.replaceChildren();
   content.profile.forEach((paragraph, index) => {
     const profileParagraph = document.createElement("p");
-    profileParagraph.textContent = paragraph;
     if (index < 2) profileParagraph.style.fontWeight = 850;
     profileHolder.append(profileParagraph);
+
+    if (animate) {
+      loadAfter(() => timeWriter(profileParagraph, paragraph, 20), 4600 + index * 2000);
+    } else {
+      profileParagraph.textContent = paragraph;
+    }
   });
+
+  if (animate) {
+    loadAfter(() => timeWriter(nameNode, selfData.name, 100), 200);
+    loadAfter(() => timeWriter(descriptionNode, content.description, 25), 2600);
+    loadAfter(renderLinks, 4600);
+  } else {
+    nameNode.textContent = selfData.name;
+    descriptionNode.textContent = content.description;
+    renderLinks();
+  }
 }
 
 function renderProjects(ui) {
@@ -161,14 +182,14 @@ function renderFooter(ui) {
   footer.append(about, disclaimer);
 }
 
-function renderPortfolio() {
+function renderPortfolio(animateIntroduction = false) {
   const content = contentForLanguage();
   document.documentElement.lang = language;
   renderNavigation(content.ui);
-  renderIntroduction(content);
+  renderIntroduction(content, animateIntroduction);
   renderProjects(content.ui);
   renderFooter(content.ui);
 }
 
-renderPortfolio();
+renderPortfolio(true);
 disappearAfterScroll(document.querySelector(".nav-bar"));
